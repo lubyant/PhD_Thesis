@@ -62,6 +62,11 @@
 \renewcommand{\cftsubsectionpagefont}{\normalfont}
 \renewcommand{\cftsubsectionleader}{\cftdotfill{\cftdotsep}}
 \renewcommand{\cftsubsectionafterpnum}{\cftparfillskip}
+% Add "Chapter" before chapter number in TOC
+\renewcommand{\cftchapternumwidth}{5em} % widen space for number + "Chapter"
+\renewcommand{\cftchapterpresnum}{Chapter~} % add the word "Chapter"
+\renewcommand{\cftchapteraftersnum}{\quad}  % space between number and title
+
 
 
 % Make sure subsections show up

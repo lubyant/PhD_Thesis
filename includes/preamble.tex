@@ -103,6 +103,10 @@
 \usepackage{makeidx}
 \makeindex
 
+\usepackage{longtable}
+\usepackage{array}
+
+
 {\theoremstyle{plain}
 \newtheorem{thm}{Theorem}[chapter]
 \newtheorem{cor}[thm]{Corollary}
@@ -132,17 +136,14 @@
 %%% requirements.  If you are producing a pretty version of your
 %%% dissertation for web use later, you will certainly want to make
 %%% your own chapter and page styles.
-
 \makechapterstyle{deposit}{%
   \renewcommand{\chapterheadstart}{}
-  \renewcommand{\printchaptername}{}
-  \renewcommand{\chapternamenum}{}
-  \renewcommand{\printchapternum}{\parbox{2em}{\MakeLowercase{\Large\scshape\thechapter{}}} }
-  \renewcommand{\afterchapternum}{}
-  \renewcommand{\printchaptertitle}[1]{%
-  \raggedright\Large\scshape\MakeLowercase{##1}}
-  \renewcommand{\afterchaptertitle}{%
-  \vskip\onelineskip \hrule\vskip\onelineskip}
+  \renewcommand{\printchaptername}{\Large\scshape Chapter} % ← Adds the word "Chapter"
+  \renewcommand{\chapternamenum}{~} % ← Adds space between "Chapter" and the number
+  \renewcommand{\printchapternum}{\Large\scshape\thechapter}
+  \renewcommand{\afterchapternum}{\par\vskip\onelineskip}
+  \renewcommand{\printchaptertitle}[1]{\raggedright\Large\scshape\MakeLowercase{##1}}
+  \renewcommand{\afterchaptertitle}{\vskip\onelineskip \hrule\vskip\onelineskip}
 }
 
 \makepagestyle{deposit}
