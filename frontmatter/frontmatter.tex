@@ -47,14 +47,26 @@
 \renewcommand{\afterloftitle}{}
 \renewcommand{\afterlottitle}{}
 
-\renewcommand{\cftchapterfont}{\normalfont} 
-\renewcommand{\cftsectionfont}{\itshape} 
-\renewcommand{\cftchapterpagefont}{\normalfont} 
-\renewcommand{\cftchapterpresnum}{\bfseries} 
-\renewcommand{\cftchapterleader}{} 
-\renewcommand{\cftsectionleader}{} 
-\renewcommand{\cftchapterafterpnum}{\cftparfillskip} 
-\renewcommand{\cftsectionafterpnum}{\cftparfillskip} 
+% Chapter and section style (original template)
+\renewcommand{\cftchapterfont}{\normalfont}
+\renewcommand{\cftsectionfont}{\normalfont}
+\renewcommand{\cftchapterpagefont}{\normalfont}
+\renewcommand{\cftchapterpresnum}{\bfseries}
+\renewcommand{\cftchapterleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsectionleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftchapterafterpnum}{\cftparfillskip}
+\renewcommand{\cftsectionafterpnum}{\cftparfillskip}
+
+% NEW: Add dotted leaders and styling to subsections and subsubsections
+\renewcommand{\cftsubsectionfont}{\itshape}
+\renewcommand{\cftsubsectionpagefont}{\normalfont}
+\renewcommand{\cftsubsectionleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsectionafterpnum}{\cftparfillskip}
+
+
+% Make sure subsections show up
+\setsecnumdepth{subsection}
+\settocdepth{subsection}
 
 % \captionnamefont{\small\sffamily} 
 % \captiontitlefont{\small\sffamily} 
