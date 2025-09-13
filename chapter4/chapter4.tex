@@ -144,29 +144,24 @@ study.
 \textcolor{red}{Need to rewrite}
 
 The objective of this chapter is to characterize the climate of wave systems in
-Lake Michigan by wave spectrum partitioning. The spectrum will be obtained from
-WIS and NDBC data from the 1990s to 2021. Wave system partition will be applied
-to the spectra in the nearshore and offshore of Lake Michigan to obtain wave
-systems (wind-sea and swell). We hypothesize that directional spectral wave
-climate will provide a clearer insight into the spatial characteristics and
-temporal patterns of wave climatology in Lake Michigan. To address this, we
-proposed the following research questions: 
-
-What are the occurrences and climatology (\eg height and period) of swell and wind-sea waves in Lake
-Michigan? 
-
-Does wind-sea and swell have different directionality in Lake Michigan?
-
-What is spatial variability of swell and wind-sea climate in Lake
-Michigan?
-
+Lake Michigan by wave spectrum partitioning. To archive this, the directional
+energy spectrum will be contructed using NDBC data from the 2011 to 2023. Wave
+system partitioning will be applied to the spectra in the offshore of Lake
+Michigan buoys (NDBC) to obtain wave systems (wind-sea and swell). The results
+of wave system partions will be validated with the Wave Information Study (WIS)
+partitions to select the most appropriate partitions hyper-parameters. With the
+wave system partitions, the climatology of the wave systems will be further
+characterized and studied, including the directional distributions of
+significant wave height ($H_s$). The annual and monthly patterns of the wave
+system is also reported. 
 \section{Study site}
 \label{c4_study_site}
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{chapter4/resources/figure4-1.jpg}
-  \caption{Geometry and bathymetry of Lake Michigan along with all wis stations (blue dots) and two NDBC buoy (white triangle).}
+  \caption{Geometry and bathymetry of Lake Michigan along with all wis stations
+  (blue dots) and two NDBC buoy (white triangle).}
   \label{fig:fig4.1}
 \end{figure}
 
@@ -375,7 +370,28 @@ across the entire time series from 2011 onward and counting the frequency of
 occurrences of these peaks within the frequency-direction domain. This
 distribution of occurrences within the frequency-direction domain was
 subsequently used to analyze various aspects, including wave directionality,
-modality, inter-annual trends, and intra-annual trends.
+modality, inter-annual trends, and intra-annual trends. Meanwhile, at each timestamps,
+wave system will be classified into three different conditions: wind-sea dominant,
+swells dominant and mixed conditions, which defined by $K$ in the following equations:
+
+\begin{equation}
+K = \frac{m_{0ws}}{m_{0tot}}
+\label{eq:eq4.9}
+\end{equation}
+
+where $m_{0ws}$ is the zeroth order of moment of wind-sea partitions, and
+$m_{0tot}$ is the zeroth order of moment of total wave energy spectrum.
+Thresholds (0.25, 0.75) of wave systems conditions were selected based on
+\citet{mazzaretto2024worldwide}'s metric and presented as following,
+
+\begin{equation}
+\begin{cases}
+\text{wind-sea domiant} & \text{if } K \geq 0.75 \\
+\text{sea domiant} & \text{if } K \leq 0.25 \\
+\text{mixed condition} & \text{if } 0.25 < K < 0.75
+\end{cases}
+\label{eq:eq4.10}
+\end{equation}
 
 \section{Results}
 \label{c4_results}
@@ -432,11 +448,6 @@ whereas swell events ($H_s = 0.41 \pm$ 0.42 m, $t_p = 4.64 \pm$ 2.22 s) are
 mainly north-northeasterly (14$^\circ \pm$ 34$^\circ$). Consequently, the
 overall sea state at 45007 exhibits a dominant northeastward orientation 
 (101$^\circ \pm$ 33$^\circ$), in contrast to the eastward dominance at 45002.
-
-
-
-
-
 
 \subsection{Validation of wave spectrum partitioning}
 \label{Validation of wave spectrum partitioning}
@@ -583,10 +594,6 @@ opposing directions. This spatial variability in wave height and period has
 direct implications for sediment transport, shoreline erosion, and long-term
 geomorphic change along different sectors of the lake’s coast.
 
-\section{Discussions}
-\label{c4_Discussions}
-
-
 \subsection{Inter- and Monthly- patterns of wave systems}
 \label{Inter- and Monthly- patterns of wave systems}
 
@@ -601,6 +608,29 @@ geomorphic change along different sectors of the lake’s coast.
   \label{fig:ndbc_annual}
 \end{figure}
 
+Annual wave climates at NDBC buoys 45002 (northern basin) and 45007 (southern
+basin) demonstrate marked spatial differences in significant wave height
+($H_s$), peak period ($T_p$), and mean direction ($\theta_p$) across total,
+swell, and wind-sea systems. At 45002, annual mean $H_s$ is relatively stable
+(0.5–0.7 m) over 2011–2023, with limited interannual variability and extremes
+primarily associated with wind-sea (Figure \ref{fig:ndbc_annual}a). Swell $H_s$
+remains smaller and more consistent, reflecting the restricted fetch of the
+northern basin. In contrast, 45007 exhibits consistently higher $H_s$ (0.6–0.9
+m) with energetic years in 2012, 2016, and 2020, when annual averages of total
+and wind-sea waves exceeded 1.0 m (Figure \ref{fig:ndbc_annual}b). Annual $T_p$
+at 45002 is dominated by short periods (4–5 s for wind-sea, ~6 s for swell) with
+little variability (Figure \ref{fig:ndbc_annual}c), whereas 45007 records longer
+swell periods (6–8 s) with greater year-to-year variability, including
+occasional extremes exceeding 8 s (Figure \ref{fig:ndbc_annual}d). Directional
+patterns further emphasize the asymmetry: at 45002, all wave systems cluster
+around southerly directions (~200–220°; Figure \ref{fig:ndbc_annual}e),
+confirming its unimodal, fetch-limited character, while at 45007, annual mean
+$\theta_p$ oscillates between north (~0–20°) and south (~180–200°), particularly
+in the swell record (Figure \ref{fig:ndbc_annual}f). These results indicate that
+the northern basin is dominated by short-period, southerly wind-sea with limited
+variability, whereas the southern basin is more energetic, variable, and
+bidirectional, sustaining both frequent wind-sea extremes and long-period swell.
+
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=1\textwidth]{chapter4/resources/ndbc_month.png}
@@ -612,11 +642,88 @@ geomorphic change along different sectors of the lake’s coast.
   \label{fig:ndbc_month}
 \end{figure}
 
-\subsection{Directional spectral wave climate in coastal regions}
-\label{Directional spectral wave climate in coastal regions}
+Seasonal cycles reveal further contrasts between the two basins. At 45002, mean
+$H_s$ is lowest in summer (June–July, ~0.3–0.5 m) and increases into autumn and
+early winter, peaking in October–December when values often exceed 0.8 m (Figure
+\ref{fig:ndbc_month}a). This increase is mainly driven by wind-sea, while swell
+contributions remain secondary, underscoring the dominance of local storm
+forcing in the north. Monthly $T_p$ values at 45002 (Figure
+\ref{fig:ndbc_month}c) remain short throughout the year (~4–5 s for wind-sea,
+~6–7 s for swell), with only modest winter lengthening. Wave directions
+($\theta_p$; Figure \ref{fig:ndbc_month}e) are persistently southerly (180–220°)
+in all months, reflecting the basin’s restricted geometry. By contrast, at
+45007, summer months are again relatively calm ($H_s \approx 0.4$ m), but
+October–December means often exceed 1.0 m, with both wind-sea and swell
+contributing substantially (Figure \ref{fig:ndbc_month}b). Peak periods at 45007
+lengthen in late autumn and winter, with swell $T_p$ frequently reaching 7–8 s
+(Figure \ref{fig:ndbc_month}d), reflecting long-period wave propagation across
+the full lake. Monthly directions (Figure \ref{fig:ndbc_month}f) confirm the
+strongly bidirectional nature of the southern basin: southerly waves dominate in
+spring and autumn, while northerly waves are frequent in summer and early
+winter. Swell, in particular, alternates between north (~0–30°) and south
+(~180–200°), highlighting the influence of opposing storm tracks and long-fetch
+dynamics. Collectively, these seasonal patterns reinforce the interannual
+findings: the northern basin remains consistently fetch-limited and southerly
+dominated, while the southern basin experiences stronger seasonality, greater
+energy, longer swell periods, and alternating bidirectional forcing.
+
+\section{Discussions}
+\label{c4_Discussions}
+
+\subsection{Wave system in Lake Michigan nearshore regions}
+\label{Wave system in Lake Michigan nearshore regions}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1\textwidth]{chapter4/resources/nearshore_system_climate.png}
+  \caption{Wave system (swell vs wind-sea vs total) in nearshore WIS stations in
+  Lake Michigan. (a) significant wave height ($H_s$) for total wave system. (b)
+  significant wave height ($H_s$) for wind-sea wave. (c) significant wave height
+  ($H_s$) for swells. (d) Dominant conditions of wave system: red-windsea
+  domiant, blue-swell dominant, green-mixed conditions. The blue does not
+  present in the (d) as not nearshore stations are categorized as swell
+  dominant.}
+  \label{fig:nearshore_system}
+\end{figure}
+
+Wave systems in nearshore Wave Information Study stations of Lake Michigan were
+presented in Figure \ref{fig:nearshore_system}. The wind-sea and swell data were
+partitioned by Wave Information Study by WAM model configure. The total wave
+height in Lake Michigan (Figure \ref{fig:nearshore_system}a) presented a clear
+spatial variation that wave heights are higher in eastern shoreline than the
+western shoreline due to strong south-eastern wind in the winter
+\citep{huang_wave_2021}. The wind-sea waves share a similar spatial pattern with
+the overall total waves (Figure \ref{fig:nearshore_system}b), where eastern
+shoreline receieves larger waves than the western coastline. Compared to local
+wind-sea waves, the swells (Figure \ref{fig:nearshore_system}c) distributed
+uniformly accross the nearshore of Lake Michigan. The wave heights of swells
+were relatively smaller than wind-sea as the most of wind-sea waves range
+between 0.6-0.8 meters, while the swells span from 0.2-0.4 meters. Figure
+\ref{fig:nearshore_system}d presented the relationship between these two wave
+systems. In Lake Michigan, most of nearshore regions were classified into
+mixed-conditions, where the ratio of wind-sea with total wave energy stay
+between 0.25 to 0.75 (see Equation \ref{eq:eq4.10}). Noticed that in Green Bay
+area (northwestern Lake Michigan) and Grand Traverse Bay (northeastern Lake
+Michigan). The wave conditions are categorized as wind-sea dominant, indicating
+that the swell impacts in these regions are relative tiny. The fetch fields in
+these two bay areas are limited that the waves could not be grown completed into
+swells. The spatial distributions of 
 
 \subsection{Impact of wave system on coastal geomorphic change}
 \label{Impact of wave system on coastal geomorphic change}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1\textwidth]{chapter4/resources/nearshore_correlation.png}
+  \caption{The shoreline erosion rate (1995-2020) vs wave system domiant
+  coefficient $K$. Noticed that $\widetilde{K}$ is the standard-normalization of
+  $K$ }
+  \label{fig:nearshore_cor}
+\end{figure}
+
+Wave systems were known for its implications on oceanic subject, such as navigation,
+habitats, etc. On the coastline, wave systems are also known as its impacts on coastal
+geomorphology. The 
 
 \subsection{Limitation}
 \label{Limitation}

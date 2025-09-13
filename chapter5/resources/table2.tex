@@ -1,0 +1,29 @@
+% Requires: \usepackage{booktabs}
+\begin{table}[htbp]
+\centering
+\caption{Evaluation metrics for the Coastal Vulnerability Index (CVI) and its
+subindices ($r_1$--$r_5$) against observed erosion-rate ranks (1--5) at Oak
+Creek and Whitting Beach. Bold values indicate the best-performing subindex per
+location for each metric.}
+\label{tab:cvi_eval_oak_whitting}
+\begin{tabular}{l l r r r r r}
+\toprule
+Location & Index & MAE & RMSE & QWK & $\rho$ & $\tau$ \\
+\midrule
+Oak Creek & CVI   & 0.583 & 0.898 &  0.197 &  0.183 &  0.161 \\
+          & $r_1$ & 0.639 & 0.898 &  0.115 & $-0.026$ & $-0.025$ \\
+          & $r_2$ & 0.444 & 0.882 &  0.119 &  0.269 &  0.258 \\
+          & $r_3$ & 0.583 & 1.041 & $-0.223$ & $-0.367$ & $-0.357$ \\
+          & $r_4$ & 0.556 & 0.943 & $-0.059$ & $-0.050$ & $-0.048$ \\
+          & $r_5$ & \textbf{0.444} & \textbf{0.816} & \textbf{0.294} & \textbf{0.340} & \textbf{0.324} \\
+\midrule
+Whitting Beach & CVI   & 0.700 & 1.000 & $-0.135$ & $-0.159$ & $-0.143$ \\
+               & $r_1$ & 0.675 & 1.037 & $-0.344$ & $-0.393$ & $-0.367$ \\
+               & $r_2$ & \textbf{0.550} & \textbf{0.866} &  0.070 &  0.103 &  0.093 \\
+               & $r_3$ & 0.550 & 0.894 & \textbf{0.141} & \textbf{0.238} & \textbf{0.215} \\
+               & $r_4$ & 0.700 & 1.072 & $-0.129$ & $-0.197$ & $-0.179$ \\
+               & $r_5$ & 0.750 & 1.072 & $-0.252$ & $-0.250$ & $-0.225$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
