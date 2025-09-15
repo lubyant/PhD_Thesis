@@ -141,8 +141,6 @@ necessitate a detailed investigation using wave system partitioning techniques
 which applied in oceanic areas, serving as the primary motivation for this
 study.
 
-\textcolor{red}{Need to rewrite}
-
 The objective of this chapter is to characterize the climate of wave systems in
 Lake Michigan by wave spectrum partitioning. To archive this, the directional
 energy spectrum will be contructed using NDBC data from the 2011 to 2023. Wave
@@ -686,28 +684,52 @@ energy, longer swell periods, and alternating bidirectional forcing.
   \label{fig:nearshore_system}
 \end{figure}
 
-Wave systems in nearshore Wave Information Study stations of Lake Michigan were
-presented in Figure \ref{fig:nearshore_system}. The wind-sea and swell data were
-partitioned by Wave Information Study by WAM model configure. The total wave
-height in Lake Michigan (Figure \ref{fig:nearshore_system}a) presented a clear
-spatial variation that wave heights are higher in eastern shoreline than the
-western shoreline due to strong south-eastern wind in the winter
-\citep{huang_wave_2021}. The wind-sea waves share a similar spatial pattern with
-the overall total waves (Figure \ref{fig:nearshore_system}b), where eastern
-shoreline receieves larger waves than the western coastline. Compared to local
-wind-sea waves, the swells (Figure \ref{fig:nearshore_system}c) distributed
-uniformly accross the nearshore of Lake Michigan. The wave heights of swells
-were relatively smaller than wind-sea as the most of wind-sea waves range
-between 0.6-0.8 meters, while the swells span from 0.2-0.4 meters. Figure
-\ref{fig:nearshore_system}d presented the relationship between these two wave
-systems. In Lake Michigan, most of nearshore regions were classified into
-mixed-conditions, where the ratio of wind-sea with total wave energy stay
-between 0.25 to 0.75 (see Equation \ref{eq:eq4.10}). Noticed that in Green Bay
-area (northwestern Lake Michigan) and Grand Traverse Bay (northeastern Lake
-Michigan). The wave conditions are categorized as wind-sea dominant, indicating
-that the swell impacts in these regions are relative tiny. The fetch fields in
-these two bay areas are limited that the waves could not be grown completed into
-swells. The spatial distributions of 
+Wave systems in the nearshore regions of Lake Michigan are illustrated in Figure
+\ref{fig:nearshore_system}. The wind-sea and swell components (2011-2023) were
+partitioned from the WIS dataset based on the WAM model configuration
+\citep{jensen_lake_2012}. The total significant wave height ($H_s$) exhibits a
+clear spatial variations (Figure \ref{fig:nearshore_system}a), with consistently
+larger waves along the eastern shoreline compared to the western shoreline. This
+east–west asymmetry is primarily driven by the prevailing southeasterly winds
+during winter months, which generate longer fetches and stronger wave growth
+along the eastern coasts \citep{huang_wave_2021,abdelhady_shoreline_2025}.
+Wind-sea waves show a spatial distribution that largely mirrors the total wave
+field (Figure \ref{fig:nearshore_system}b). The eastern nearshore consistently
+receives higher wind-sea heights, whereas the western shorelines are more with
+smaller wind-sea waves. In contrast, swell waves (Figure
+\ref{fig:nearshore_system}c) appear more uniformly distributed across the lake’s
+nearshore regions. Their magnitudes, however, remain smaller than those of
+wind-sea waves: while wind-sea $H_s$ typically ranges between 0.6–0.8 m, swell
+$H_s$ generally falls between 0.2–0.4 m. This disparity underscores the
+dominance of locally generated wind-sea waves over remotely developed swell
+within Lake Michigan. The relationship between these two systems is summarized
+in the wave system classification (Figure \ref{fig:nearshore_system}d). Most
+nearshore regions fall into mixed conditions, where the ratio of wind-sea to
+total wave energy remains between 0.25 and 0.75 (see Equation \ref{eq:eq4.10}).
+Notable exceptions occur in semi-enclosed bay environments such as Green Bay
+(northwestern Lake Michigan) and Grand Traverse Bay (northeastern Lake
+Michigan), which are categorized as wind-sea dominant. In these areas, limited
+fetch lengths constrain wave development, preventing the formation of fully
+developed swells. Consequently, local wind forcing exerts a proportionally
+stronger influence on the nearshore wave climate compared to open-coast
+settings. This fetch-limited behavior has been documented for Lake Michigan and
+other sites using modern unstructured SWAN and GLWPS modeling as well as
+effective-fetch methods adapted for inland waters
+\citep[\eg][]{mao_modeling_2016,alves2023noaa,rohweder2008application}. 
+
+The spatial variations in wave systems have important consequences for nearshore
+geomorphic processes and coastal management. Regions dominated by wind-sea
+waves, such as Green Bay and Grand Traverse Bay, are more susceptible to short,
+steep waves that can rapidly mobilize sediment and accelerate localized
+shoreline erosion \citep{voulgaris2000sediment,green2014review}. In contrast,
+mixed-wave conditions along the eastern shoreline expose coasts to both
+persistent swell energy and energetic wind-sea events, which can amplify
+long-term erosion hazards and stress coastal infrastructure
+\citep{mattheus2025response,extreme_Masselink_2016,barnard2017extreme}.
+Recognizing these spatial patterns is therefore essential for designing targeted
+adaptation strategies, such as reinforcing vulnerable shorelines, prioritizing
+monitoring in mixed-energy zones, and accounting for bay-specific wave regimes
+in management and planning decisions \citep{zhu_trends_2024}.
 
 \subsection{Impact of wave system on coastal geomorphic change}
 \label{Impact of wave system on coastal geomorphic change}
@@ -716,17 +738,110 @@ swells. The spatial distributions of
   \centering
   \includegraphics[width=1\textwidth]{chapter4/resources/nearshore_correlation.png}
   \caption{The shoreline erosion rate (1995-2020) vs wave system domiant
-  coefficient $K$. Noticed that $\widetilde{K}$ is the standard-normalization of
-  $K$ }
+  coefficient $K$ (1995-2020). (a) correlation at reach scale. (b) correlation
+  at county scale. Noticed that $\widetilde{K}$ is the standard-normalization of
+  $K$. Negative value denotes a erosion of shoreline}
   \label{fig:nearshore_cor}
 \end{figure}
 
-Wave systems were known for its implications on oceanic subject, such as navigation,
-habitats, etc. On the coastline, wave systems are also known as its impacts on coastal
-geomorphology. The 
+Figure~\ref{fig:nearshore_cor} compares shoreline erosion rates (1995–2020) with
+the wave‐system ratio $K$, defined as the wind–sea energy fraction relative to
+total wave energy ($\widetilde{K}$) denotes its standard–normalized form. At the
+reach scale (Figure \ref{fig:nearshore_cor}a), most reaches exhibit a positive
+association between \(\tilde{K}\) and erosion: where the wind–sea share is
+larger, erosion rates tend to be higher. At the county scale (panel b), this
+relationship becomes clearer and more monotonic, consistent with the expectation
+that spatial aggregation filters local heterogeneity (\eg, landscape, shoreline
+orientation, and armoring) and reveals the underlying wave–forcing signal more
+cleanly \citep{swenson_bluff_2006}.
 
-\subsection{Limitation}
-\label{Limitation}
+The mechanism is physically plausible. A higher wind–sea share implies
+shorter–period, steeper waves that enhance near–bed orbital velocities and
+wave–driven bed shear stress in shallow nearshore waters—conditions that
+efficiently mobilize sediment and favor episodic scarping and shoreline retreat
+\citep{voulgaris2000sediment,green2014review}.  For the Great Lakes
+specifically, storm-driven events repeatedly increase sediment resuspension and
+export in southern Lake Michigan, indicating that event-scale, locally generated
+(wind–sea) forcing is a dominant control on nearshore sediment dynamics
+\citep{kamphuis1987recession,melby2012wave}. Together, these process insights
+align with the empirical patterns in Figure~\ref{fig:nearshore_cor}: coast
+segments and counties characterized by higher \(\tilde{K}\) tend to experience
+greater erosion. 
+
+The differing strengths of the reach– versus county–scale correlations highlight
+the value of a multiscale analysis (Section~\ref{Chapter2}). The fine scale
+(\eg, Figure~\ref{fig:nearshore_cor}a) resolves local process controls—shoreline
+orientation, nearshore bathymetry, landscape, and coastal structures—so it is
+well suited for diagnosing mechanisms and identifying hotspots. However, it is
+also more susceptible to noise and confounding influences. In contrast, the
+sparse or aggregated scale (\eg, Figure~\ref{fig:nearshore_cor}b) suppresses
+much of this local variability, yielding a clearer view of the dominant signal
+linking wave‐system composition and erosion, albeit at the cost of masking
+sub–reach heterogeneity. In practice, a multiscale workflow is therefore
+essential: compute indicators at native resolution (\eg, transect-based scale),
+summarize at reach and county scales, and compare patterns across scales.
+
+\subsection{Limitations and future work}
+\label{c4_Limitation}
+
+This analysis depends on several predefined hyperparameters that govern the
+partitioning outcomes. First, the \emph{wave aging factor}—introduced earlier—is
+a key control on the swell–wind–sea separation. Although multiple values were
+compared and an optimal factor was selected and “validated” in
+Section~\ref{Validation of wave spectrum partitioning}, that evaluation relied
+on agreement with the WIS hindcast (WAM configuration). In other words, it is a
+model–to–model comparison rather than a validation against observed swell and
+wind–sea conditions.
+
+Second, the dominance thresholds in Equation~\ref{eq:eq4.10}, adopted from
+\citet{mazzaretto2024worldwide}, were developed for an oceanic spectral climate.
+These cutoffs may not transfer directly to Lake Michigan; in particular, the
+method appears to under-identify swell-dominant conditions (see Figure
+\ref{fig:nearshore_cor}d).
+
+Third, the present work focuses primarily on a binary partition between swell
+and wind–sea. Subpartitioning within the swell group is also important because
+it can strongly inform the direction and magnitude of sediment transport in
+nearshore settings, as noted by numerous studies
+\citep[\eg][]{mazzaretto2024worldwide,coates_beach_1998,langodan_unraveling_2018,portilla-yandun_climate_2016,sartini_spectral_2024,venolia_historical_2024,zheng_investigation_2024}.
+In addition, there are alternatives for characterizing the spectral climate that
+do not depend on explicit swell partitioning; for example,
+\citet{echevarria_influence_2020,echevarria_seasonal_2019} apply principal
+component analysis directly to the spectral matrix to extract climatic features.
+
+Addressing these limitations suggests several avenues for future work. First,
+validate the aging factor using field observations. Second, test alternative
+thresholds for swell/wind–sea dominance—or propose an alternative metric for
+characterizing dominance. Finally, further analyze the swell climate with
+appropriate methods to better elucidate sediment-transport patterns.
 
 \section{Conclusion}
 \label{c4_Conclusion}
+
+In this chapter, hourly directional spectra from NDBC buoys (2011–2023) were
+constructed and partitioned into wind–sea and swell using a two-dimensional
+watershed approach (Section~\ref{Wave spectral partitions}). Cross-comparisons
+with WIS hindcasts and buoy-constructed spectra indicate consistent construction
+and partitions of wind–sea magnitudes and directions, supporting the robustness
+of the workflow.
+
+The partitioned climatology reveals a clear meridional divide. At 45002, the
+wave field is fetch-limited, predominantly southerly, and characterized by
+short-period wind–seas with secondary swell . At 45007, the regime is more energetic and
+bidirectional: wind–sea arrives from both north and south, and long-period swell
+frequently propagates from opposing directions. Seasonally,
+both sites are calmest in summer and intensify into late autumn and early
+winter, with a notable lengthening of swell periods during this window.
+
+Nearshore analyses from WIS show an east–west gradient, with larger total and
+wind–sea waves along the eastern shore and smaller, fetch-limited conditions
+along the western shore, including southeastern Wisconsin
+(Figure~\ref{fig:nearshore_system}). Classification by the wind–sea energy
+fraction indicates predominantly mixed conditions on open coasts and wind–sea
+dominance in semi-enclosed bays. Across scales, areas with a greater wind–sea
+share align with stronger historical shoreline retreat, linking sea-state
+composition to observed geomorphic change. Collectively, these results establish
+a lake-wide, wave-system perspective and delineate spatial patterns and seasonal
+windows most relevant to hazard assessment and coastal management along the
+southeastern Wisconsin coast.
+
