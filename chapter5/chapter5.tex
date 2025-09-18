@@ -1,5 +1,5 @@
-\chapter{Chapter 5:  Assessing coastal vulnerability using directional spectral
-wave climate: Coastal Vulnerability Index} 
+\chapter{Assessing coastal vulnerability using directional spectral wave
+climate: Coastal Vulnerability Index} 
 \label{chapter5}
 
 
@@ -535,17 +535,86 @@ practical improvements
 \section{Discussions}
 \label{c5_Discussions}
 
+\subsection{Limitation of CVI}
+\label{Limitation of CVI}
+
+The results in Section~\ref{Evaluation of CVI} indicate that the current CVI
+formulation (Equation~\ref{eq:eq5.6}) has limited skill in assessing or
+predicting coastline vulnerability. CVI is defined as the square root of five
+equally weighted subcomponents (R1–R5) representing key physical dimensions of
+the coastal system—geomorphology, wave climate, water-level climate, and
+sedimentation climate (Figure~\ref{fig:c5_method_cvi}). However, the
+equal-weight assumption rarely holds in practice because drivers act over
+different spatial and temporal scales. For example, sediment transport often
+governs multi-year, alongshore-integrated erosion and deposition
+\citep[e.g.,][]{davidson-arnott_wave_1980,chowdhury_effect_2017,penrod2023multidecadal,kabuth_wave_2014,hapke_review_2010},
+whereas wave impacts tend to be episodic and locally confined
+\citep{swenson_bluff_2006}. Consequently, the relative importance (coefficients)
+of LBI, WSI, and WHDI can vary across sites and time horizons. A weighted CVI
+variant is therefore warranted; alternative weighting strategies are examined in
+Section~\ref{Coefficient of CVI}.
+
+A second limitation is the incomplete treatment of human actions. Vegetation
+management, shoreline armoring, and other coastal defense structures can
+substantially reshape morphology and topography and modify local hydraulics,
+thereby altering exposure and response pathways
+\citep{nordstrom2014living,jackson2015beach,sanitwong2023environmental}. This
+omission constrains the applicability of CVI in urbanized or engineered settings
+where anthropogenic interventions are pervasive and cannot be neglected.
+
+Finally, the conversion of continuous variables to five ordinal ranks was based
+on Gaussian quantiles (Figure~\ref{fig:five_ranks}). In practice, rank
+thresholds should be informed by site-specific knowledge and expert judgment
+\citep[e.g.,][]{fu2022characteristics,gornitz_global_1991,anfuso_coastal_2021}.
+Expert input can be combined with data-driven calibration—using observed
+erosion-rate ranks—to refine thresholds and produce more defensible
+classifications.
+
 \subsection{Coefficient of CVI}
 \label{Coefficient of CVI}
 
-Although \citet{gornitz_global_1991} introduced the unweighted vulnerability index,
-which is presented in \ref{eq:eq5.6}, it is not an accurate approach for evaluation goal,
-as all component of subindices sharing equal weights \citet{fu2022characteristics}. A common
-adaptation of it is to apply a weighted index with summation.
+Although \citet{gornitz_global_1991} introduced the unweighted vulnerability
+index, which is presented in \ref{eq:eq5.6}, it is not an accurate approach for
+the evaluation goal, as all components of the subindices share equal weights
+\citet{fu2022characteristics}. A common adaptation of it is to apply a weighted
+index with summation. To obtain a linear composite consistent with the five
+ordinal subindices, we defined
+
 \begin{equation}
-  CVI_{weighted} = \sum_{i=1}^{n}W_ir_i
-\label{eq:eq5.7}
+CVI^{\text{lin}}_w = \sum_{j=1}^{5} w_j r_j,\qquad
+w_j \ge 0,\ \sum_{j=1}^{5} w_j = 1,\ r_j \in \{1,\ldots,5\}.
 \end{equation}
+
+To determine and verify the weights, there are numerous options, including
+Analytic Hierarchy Process (AHP)
+\citep{mosadeghi2015comparison,cabrera2019flood,saffarian2020measuring}, entropy
+method \citep{cabrera2020flood}, rank weight method \citep{alam2020cyclone},
+proportional weighted method \citep{dou2018flood}, fuzzy analytic hierarchy
+process method \citep{wijitkosum2019fuzzy}, and fuzzy logic method
+\citep{hoque2021cyclone}. In this study, to simplify the simulation of weights, we
+apply a hybrid method of expert-based and entropy-based weighting. Weights
+were specified by (i) expert elicitation (\eg, apply AHP), (ii) entropy
+weighting based on indicator dispersion, and (iii) a convex hybrid
+\(w^{(\mathrm{hyb})}(\alpha) = \alpha\,w^{(\mathrm{exp})} +
+(1-\alpha)w^{(\mathrm{ent})}\), \(\alpha\in[0,1]\). Notably, to simulate the effect of expert
+decisions, we apply equal weights for the expert part of weights. Five different hybrid 
+coefficients (0, 0.25, 0.5, 0.75, 1) were selected, where 0 is entropy-dominant and 1 is expert-dominant.
+
+Table \ref{tab:whitting_oakcreek_vertical} highlights that weighting schemes
+influence index performance differently across sites. At Whitting Beach, entropy
+weighting (\(\alpha=0\)) produced poor agreement with observed erosion ranks,
+largely because one subindex dominated the weights, but performance improved
+steadily as expert information was introduced, with the best results under
+balanced or expert-dominant weights. At Oak Creek Beach, however, all weighting
+schemes yielded weak or negative agreement, suggesting that the current set of
+subindices may not capture the local erosion drivers effectively. These results
+illustrate two key limitations: first, entropy-based weights can overemphasize a
+single indicator and distort index behavior; second, site-specific processes may
+not be well represented within a fixed set of subindices, reducing predictive
+skill. Future work should incorporate the expert knowledge in $w^{exp}$ using
+AHP method, instead of using equal weights. Such developments would strengthen
+the CVI framework and enhance its transferability across diverse coastal
+environments.
 
 \input{chapter5/resources/table3.tex}
 
@@ -560,8 +629,51 @@ adaptation of it is to apply a weighted index with summation.
   \label{fig:cites_rotations}
 \end{figure}
 
-\subsection{Limitation of CVI and future works}
-\label{Limitation of CVI}
+The Coastal Vulnerability Index (CVI) demonstrates contrasting behavior at Oak
+Creek and Whitting Beach, reflecting differences in their geomorphic settings
+and coastal processes. At Oak Creek Beach, both the CVI and its sub-indices are
+more evenly distributed alongshore, suggesting a relatively uniform response to
+forcing factors. In contrast, Whitting Beach shows a pronounced spatial
+asymmetry, with elevated index values concentrated along the northwestern edge.
+This asymmetry is indicative of a common but distinctive process in coastal
+environments known as beach rotation. Rather than experiencing uniform shoreline
+retreat, beaches undergoing rotation erode at one end while accreting at the
+other. Such dynamics are particularly characteristic of headland-bound beaches
+where the incident wave climate is bi-directional, driving sediment
+redistribution rather than consistent retreat
+\citep{wiggins_regionally-coherent_2019}.
+
+The patterns shown in Figure \ref{fig:cites_rotations} highlight this process:
+Oak Creek Beach is dominated by erosion, with most segments showing negative
+rotation rates, while Whitting Beach reveals a more complex response, with
+central sections eroding but the eastern end building outward. Because the CVI
+incorporates both wave climate and geomorphic context within its sub-indices, it
+is capable of representing these rotational dynamics. This suggests that the
+CVI, beyond indicating general vulnerability, can also capture special forms of
+erosion processes such as beach rotation, which are critical to understanding
+site-specific shoreline change.
 
 \section{Conclusion}
 \label{c5_Conclusion}
+
+This study presented a Coastal Vulnerability Index (CVI) designed to account
+for Lake Michigan’s directional spectral wave climate. By integrating physical
+processes of geomorphic buffering, wave-system composition, wave directionality,
+water-level acting, and longshore transport, the index offers a process-based
+and mappable tool for assessing coastal risk. Application at Oak Creek and
+Whitting beaches revealed clear alongshore patterns: Oak Creek exhibited
+shifting hotspots consistent with beach rotation, while Whitting showed a stable
+gradient with persistent northern vulnerability.
+
+Evaluation against shoreline-change data demonstrated that the CVI effectively
+captures broad spatial patterns and site-specific processes. Although individual
+subindices sometimes aligned more strongly with observed erosion, the composite
+CVI provided valuable first-order screening and highlighted the dominant drivers
+at each site. Weighting experiments further showed the potential for tailored
+formulations that better reflect local dynamics.
+
+Overall, the proposed CVI advances coastal vulnerability assessment in Lake
+Michigan by explicitly linking wave directionality and sediment processes to
+shoreline change. Its capacity to map spatially coherent patterns and identify
+rotational dynamics makes it a practical tool for guiding monitoring,
+adaptation, and coastal management strategies across the Great Lakes.
