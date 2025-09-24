@@ -7,10 +7,11 @@
 Wave climate, which refers to characteristics of wave conditions
 \citep{wiegel_oceanographical_2013}, is an important concept in coastal oceanic
 areas as it plays a significant role across various aspects including
-engineering, and geomorphological change and ecology. Key wave climate
-parameters, such as wave height, wave period, and wave energy, are widely
-applied in coastal and oceanic engineering. These parameters are essential for
-various applications including navigation safety design
+engineering \citep{manual1995design,goda2010random}, and geomorphological change
+\citep{ashton2006high1,ashton2006high2,hapke2010predicting} and ecology
+\citep{zhu2022wave,denny2021wave}. Key wave climate parameters, such as wave
+height, wave period, and wave energy, are widely applied in coastal and oceanic
+engineering, including navigation safety design
 \citep{lee_boundary_2009,phelps_ship_1995}, ship responses
 \citep{phelps_ship_1995}, inner harbor design
 \citep{romano-moreno_multimodal_2023}, energy facility development
@@ -21,7 +22,9 @@ example, wave climate can drive nearshore sediment transport, which causes
 severe beach erosion and bluff failure
 \citep{benumof_relationship_2000,brown_factors_2005,lamoe_wave_1989}. Beach
 erosion and bluff failure are two coastal hazards which is able to pose
-substantial losses to coastal communities, infrastructure, and local economies.
+substantial losses to coastal communities \citep{buck2025living}, infrastructure
+\citep{adshead2024climate,steven2023coastal}, and local economies
+\citep{nopiana2024estimating,gopalakrishnan2016economics,landry2011coastal}.
 Last but not least, wave climate can impact the health of coastal natural
 habitats \citep{meadows_cumulative_2005}. In the Great Lakes, lake trout, an
 economically significant species, often spawn in areas with high wave-induced
@@ -35,12 +38,14 @@ ecosystems.
 
 Wave systems climate is a characteristic of wave energy using directional wave
 energy spectrum. Conventional wave climate analysis primarily focuses on key
-wave statistics, such as wave height and wave period. Nevertheless, this
-approach can sometimes be limited in scope, as it overlooks the directional
-distribution of wave energy, which is essential for understanding complex
-coastal and oceanic processes. Wave system can address this limitation by
-employing wave spectrum partitioning techniques that splits wave spectrum into
-distinct components, which corresponds to their original meteorological events
+wave statistics, such as wave height and wave period
+\citep{resio2002meteorology,casas2024wind}. Nevertheless, this approach can
+sometimes be limited in scope, as it overlooks the directional distribution of
+wave energy, which is essential for understanding complex coastal and oceanic
+processes \citep{kamphuis2020introduction,komar1998modeling}. Wave system can
+address this limitation by employing wave spectrum partitioning techniques that
+splits wave spectrum into distinct components, which corresponds to their
+original meteorological events
 \citep{jiang_wave_2019,portilla-yandun_wave_2015}. This provides valuable
 insights into states and directionality of wind-waves, which refer to the
 combination of locally generated wind waves and swells arriving from distant
@@ -57,14 +62,15 @@ length and speed \citep{george_nearshore_2020,vettor_global_2020}.
 Understanding directionality and states of the wind-waves (swell or wind-sea) is
 crucial for characterizing directional spectral wave climates, as the states and
 directionalities of wind waves can result in distinct physical implications,
-particularly for nearshore sediment transport \citep{george_nearshore_2020}.
-Wind-sea waves, with their shorter periods and higher frequencies, are more
-effective at stirring and mobilizing sediment in shallow waters due to their
-steepness and higher orbital velocities near the seabed
+particularly for nearshore sediment transport
+\citep{george_nearshore_2020,work2011directional,de2020optimal}. Wind-sea waves,
+with their shorter periods and higher frequencies, are more effective at
+stirring and mobilizing sediment in shallow waters due to their steepness and
+higher orbital velocities near the seabed
 \citep{boechat_albernaz_effects_2019,nabavianpour_experimental_2024}. In
 contrast, swell waves, with their longer periods and lower frequencies, can
 transport sediment over longer distances and contribute to broader-scale coastal
-reshaping \citep{basaran_effect_2021}.  Moreover, in some cases, opposing
+reshaping \citep{basaran_effect_2021}. Moreover, in some cases, opposing
 directionality of sediment transport from wind waves and swells can result in
 imbalances of sediment budget, leading to dramatic coastal changes
 \citep{hapke_review_2010}. To date, directional spectral wave climate provides a
@@ -79,7 +85,7 @@ independent areas and classifying for aligning the area into corresponding sea
 state. For the first step, the partitioning algorithms can be broadly classified
 into two main categories based on the dimensions of the wave spectrum they
 analyze: one-dimensional and two-dimensional algorithms
-\citep{portilla_spectral_2009}.  One-dimensional partitioning algorithm
+\citep{portilla_spectral_2009}. One-dimensional partitioning algorithm
 disregards wave directionality and instead differentiates different wave systems
 by applying frequency-based criteria for decomposition. For example, a common
 one-dimensional partition algorithm is spectrum peak method, where each local
@@ -88,11 +94,11 @@ peak of energy spectrum will be identified as an independent peak of wave system
 The primary limitation of one-dimensional partitioning is its inability to
 account for the directionality of different sub partitions, as these two
 components often exhibit differing directional characteristics
-\citep{george_nearshore_2020}.  Two-dimensional wave spectrum partition could
+\citep{george_nearshore_2020}. Two-dimensional wave spectrum partition could
 partition wind-sea and swell in direction-frequency domain by adding the
 information of wind speed and wind direction. The first 2-d partition algorithm
-was proposed by Gerling in 1992, where the algorithm detects the connectivity of
-all sub-partitions over a minimum energy threshold
+was proposed by \citet{gerling_partitioning_1992} in 1992, where the algorithm
+detects the connectivity of all sub-partitions over a minimum energy threshold
 \citep{gerling_partitioning_1992}. Subsequently, a novel approach—the watershed
 algorithm—was introduced for spectrum partitioning. This method reduces the
 dependency on spectrum availability \citep{hasselmann_improved_1996} and offers
@@ -102,7 +108,7 @@ convolution kernel to smooth out spurious partitions, improving the accuracy and
 reliability of the spectral decomposition. For the second step, the common
 approaches of swell/wind-sea classification are introduced by
 \citet{komen_existence_1984} and \citet{jensen_lake_2012}, which classify the
-wind-sea and swell y comparing wave speed with wind speed. To the best of the
+wind-sea and swell by comparing wave speed with wind speed. To the best of the
 author's knowledge, these identification approaches are applied to NDBC
 (National Data Buoy Center) data and WIS (Wave Information Study) data, which
 represent two primary sources of measured and hindcast wave data in Lake
@@ -126,20 +132,22 @@ approaches, wave spectral analysis has since been applied extensively to
 characterize wave climates across various spatial and temporal scales. Studies
 have explored regional wave climates, such as those in local scales
 \citep{romano-moreno_multimodal_2023,venolia_historical_2024,zheng_investigation_2024}
-and the oceanic scale
-\citep{jiang_wave_2019,langodan_unraveling_2018,portilla-yandun_climate_2016}
-even global scales \citep{echevarria_seasonal_2019,echevarria_influence_2020}.
+and the regional scale
+\citep{jiang_wave_2019,langodan_unraveling_2018,portilla-yandun_climate_2016,stopa2016comparison}
+even global scales
+\citep{echevarria_seasonal_2019,echevarria_influence_2020,portilla2018global}.
 Despite the well-established applicability of wave spectrum analysis in oceanic
 environments, the directional spectral wave climate of Lake Michigan remains
 relatively understudied. Compared to oceanic climate, Lake Michigan exhibits a
 similar wave climate characterized by both strong bimodality and
-bidirectionality of sea states. Nevertheless, Lake Michigan also exhibits a
-distinct wave climate characterized by relatively minimal tidal ranges and
-limited fetch field, making it challenging to directly apply findings from
-oceanic studies to this freshwater lake system. These unique features
-necessitate a detailed investigation using wave system partitioning techniques
-which applied in oceanic areas, serving as the primary motivation for this
-study.
+bidirectionality of sea states \citep{rogers2007directional,jensen_lake_2012}.
+Nevertheless, Lake Michigan also exhibits a distinct wave climate characterized
+by relatively minimal tidal ranges and limited fetch field, making it
+challenging to directly apply findings from oceanic studies to this freshwater
+lake system \citep{trebitz2006characterizing,alves2014operational}. These unique
+features necessitate a detailed investigation using wave system partitioning
+techniques which applied in oceanic areas, serving as the primary motivation for
+this study.
 
 The objective of this chapter is to characterize the climate of wave systems in
 Lake Michigan by wave spectrum partitioning. To archive this, the directional
@@ -151,7 +159,10 @@ partitions to select the most appropriate partitions hyper-parameters. With the
 wave system partitions, the climatology of the wave systems will be further
 characterized and studied, including the directional distributions of
 significant wave height ($H_s$). The annual and monthly patterns of the wave
-system is also reported. 
+system will also be reported. Furthermore, the nearshore wave system climates in
+Lake Michigan, as well as their implications on coastal geomorphological changes
+will also be discussed.
+
 \section{Study site}
 \label{c4_study_site}
 
@@ -227,9 +238,11 @@ THREDDS Data Server
 (\url{https://chldata.erdc.dren.mil/thredds/catalog/catalog.html}). However,
 data availability is limited to only four years from 2020 (see Figure
 \ref{fig:fig4.2}). Due to the limited availability of data in the central Great
-Lakes, in this study, the WIS spectral data in the 45002 and 45007 will only be
-used to validate the partitioning results, as it provides partitioned swell and
-wind-sea wave climates.
+Lakes, in this study, the offshore WIS spectral data in the 45002 and 45007 will
+only be used to validate the partitioning results, as it provides partitioned
+swell and wind-sea wave climates. For the nearshore wave spectral data, the WIS
+stations data will be applied as their offer hourly 2-d spectral data with
+partitions.
 
 Nation Data Buoy Center (NDBC) provides detailed spectral wave data obtained
 from meteorology buoys placed by NOAA. In Lake Michigan, NOAA placed two
@@ -263,10 +276,12 @@ directional spectra.
 Where $c(f)$ is the energy density spectrum in the frequency band $f$, $r_1$ and
 $r_1$ are the directional Fourier coefficients measured by the hull, $\theta_1$
 and $\theta_2$  are the mean and principal wave direction measured by the hull,
-$\theta$ is the directional band which is chosen as 5 degree. which poses
-challenges when applying logarithmic transformations in the analysis. To
-eliminate this negative value, \citet{earle_use_1999} provided an approach by
-weighing the coefficients in the equation \ref{eq:eq4.3} as following.
+$\theta$ is the directional band which is chosen as 5 degree. Because of the
+trigonometric functions in Equation \ref{eq:eq4.3}, the calculated wave energy
+can sometimes take on negative values, which complicates the process of
+partitioning the wave spectrum. To eliminate this negative value,
+\citet{earle_use_1999} provided an approach by weighing the coefficients in the
+equation \ref{eq:eq4.3} as following.
 
 \begin{equation}
     D(f,\theta)=\frac{0.5+\frac{2}{3}r_1\cos(\theta-\theta_1)+\frac{1}{6}r_2\cos(\theta-\theta_2)}{\pi}
@@ -274,12 +289,12 @@ weighing the coefficients in the equation \ref{eq:eq4.3} as following.
 \end{equation}
 
 This approach ensures that most wave climate statistics, including significant
-wave height, peak wave period, and peak wave direction, remain consistent with
-the original spectrum. However, it may also introduce bias in the representation
-of directional wave spreading. In this study, the wave directional spectrum is
-divided into 72 directional bands, each at 5-degree intervals starting from 0
-degrees. The wave frequency spectrum is partitioned into 38 frequency bands,
-determined by a ratio of 0.11 and starting at 0.03 Hz.
+wave height, peak wave period, and peak wave direction, remove negative values
+but remain consistent with the original spectrum. However, it may also introduce
+bias in the representation of directional wave spreading. In this study, the
+wave directional spectrum is divided into 72 directional bands, each at 5-degree
+intervals starting from 0 degrees. The wave frequency spectrum is partitioned
+into 38 frequency bands, determined by a ratio of 0.11 and starting at 0.03 Hz.
 
 \subsection{Wave spectral partitions}
 \label{Wave spectral partitions}
@@ -324,11 +339,11 @@ statement.
 \end{equation}
 
 Where $\beta$ is age factor, $U_z$ is the wind speed at elevation $z$, $c_p$ is
-the phrase speed determined by dispersion relationship, $theta$ is wave
+the phrase speed determined by dispersion relationship, $\theta$ is wave
 direction, and $\varphi$ is wind direction. This approach follows Komen’s WAM
 configuration, which is also utilized in the WIS framework (as outlined in
 Equation \ref{eq:eq4.1}). In this study, the number of partitions was set to
-three, resulting in one wind-sea component and two swell components. Various age
+two, resulting in one wind-sea component and one swell components. Various age
 factors (1.2, 1.3, 1.5, and 1.7) were tested by comparing the generated
 partitioning results with existing partitions from WIS and NDBC from 2020 to
 2023. Then, an optimal age factor then was chosen to generate long-term wave
@@ -337,11 +352,11 @@ system partition in 45002 to 45007 from 2011 to 2023.
 \subsection{Directional spectral wave climate analysis}
 \label{Directional spectral wave climate analysis}
 
-Wave system partitioning provides one wind-sea partition spectrum and two swell
+Wave system partitioning provides one wind-sea partition spectrum and one swell
 partitions spectrum at each hour from 2011 to 2023. The wave spectra were then
 used for calculating the integrated wave climate including significant wave
 height $H_s$, peak wave height $T_p$, and peak wave direction $\theta_p$ for
-wind-sea and swell.  
+wind-sea and swell using the following formulae.  
 
 \begin{equation}
     H_s=4\times \sqrt{\int \int S(f,\theta)dfd\theta}
@@ -366,7 +381,7 @@ system’s properties within the spectrum \citep{portilla-yandun_wave_2015}. The
 next step involves collecting all peak positions of the wave system partitions
 across the entire time series from 2011 onward and counting the frequency of
 occurrences of these peaks within the frequency-direction domain. This
-distribution of occurrences within the frequency-direction domain was
+distribution of occurrences within the frequency-direction domain is 
 subsequently used to analyze various aspects, including wave directionality,
 modality, inter-annual trends, and intra-annual trends. Meanwhile, at each timestamps,
 wave system will be classified into three different conditions: wind-sea dominant,
@@ -380,7 +395,8 @@ K = \frac{m_{0ws}}{m_{0tot}}
 where $m_{0ws}$ is the zeroth order of moment of wind-sea partitions, and
 $m_{0tot}$ is the zeroth order of moment of total wave energy spectrum.
 Thresholds (0.25, 0.75) of wave systems conditions were selected based on
-\citet{mazzaretto2024worldwide}'s metric and presented as following,
+\citet{mazzaretto2024worldwide}'s metric and presented as the following
+equation,
 
 \begin{equation}
 \begin{cases}
@@ -410,7 +426,7 @@ Thresholds (0.25, 0.75) of wave systems conditions were selected based on
 \input{chapter4/resources/table4-1.tex}
 
 The wave spectrum was constructed and partitioned at every hour in 45002 and
-45007 from 2011 to 2023. Figure \ref{fig:fig4.6} shows the result of wave
+45007 from 2011 to 2023. Figure \ref{fig:fig4.6} shows a sample result of wave
 spectrum construction and wave system partition in station 45002 on 2020-07-22,
 10 am. The two partitions: wind-sea (Figure \ref{fig:fig4.6} c) and swell
 (Figure \ref{fig:fig4.6} d) are arranged in descending order of frequency, as
@@ -425,27 +441,28 @@ occurrences, which will be discussed in the next section.
 Meanwhile, key wave parameters such as the significant wave height $H_s$, peak
 wave angle $\theta_p$ and peak frequency $f_p$ were extracted from each
 partition and aggregated to generate long-term statistics covering the period
-from 1996 to 2023 (Table \ref{tab:tab4.1}) after excluding null and zero-value
-partitions during icy seasons. At Station 45002, about 56k partitions were
-identified, including roughly 37k wind-sea events and 47k swell events.  At
-Station 45007, a comparable number of partitions (about 55k) were recorded, with
-approximately 36k wind-sea and 45k swell events, indicating a similar balance
-between the two wave systems. The mean significant wave height ($H_s$) is nearly
-identical at the two sites (0.66 $\pm$ 0.57 m at 45002 and 0.65 $\pm$ 0.60 m at
-45007). Peak periods ($t_p$) also remain close, with slightly longer waves
-observed at Station 45002 (4.31 $\pm$ 1.51 s) compared to Station 45007 (4.23
-$\pm$ 1.33 s). In terms of wave direction, however, the stations diverge. At
-45002, wind-sea events ($H_s = 0.66 \pm 0.53$ m, $t_p = 3.82 \pm 1.11$ s)
-predominantly travel from the west-southwest (217$^\circ \pm$ 37$^\circ$), while
-swell events ($H_s = 0.41 \pm 0.43$ m, $t_p = 4.59 \pm 2.42$ s) are oriented
-southward (189$^\circ \pm$ 36$^\circ$). The combined sea state is dominated by
-waves propagating eastward (201$^\circ \pm$ 36$^\circ$). In contrast, at Station
-45007, wind-sea conditions are similar in energy ($H_s = 0.67 \pm 0.58$ m, $t_p
-= 3.78 \pm 1.14$ s) with a predominant direction of 189$^\circ \pm$ 36$^\circ$, 
-whereas swell events ($H_s = 0.41 \pm$ 0.42 m, $t_p = 4.64 \pm$ 2.22 s) are
-mainly north-northeasterly (14$^\circ \pm$ 34$^\circ$). Consequently, the
-overall sea state at 45007 exhibits a dominant northeastward orientation 
-(101$^\circ \pm$ 33$^\circ$), in contrast to the eastward dominance at 45002.
+from 2011 to 2023 (Table \ref{tab:tab4.1}) after excluding null and zero-value
+partitions during icy seasons. At Station 45002, $56,087$ partitions were
+identified, including roughly $37,023$ wind-sea events and $46,923$ swell
+events. At Station 45007, a comparable number of partitions ($55,245$) were
+recorded, with approximately $35,925$ wind-sea and $44,774$ swell events,
+indicating a similar balance between the two wave systems. The mean significant
+wave height ($H_s$) is nearly identical at the two sites (0.66 $\pm$ 0.57 m at
+45002 and 0.65 $\pm$ 0.60 m at 45007). Peak periods ($t_p$) also remain close,
+with slightly longer waves observed at Station 45002 (4.31 $\pm$ 1.51 s)
+compared to Station 45007 (4.23 $\pm$ 1.33 s). In terms of wave direction,
+however, the stations diverge. At 45002, wind-sea events ($H_s = 0.66 \pm 0.53$
+m, $t_p = 3.82 \pm 1.11$ s) predominantly travel from the west-southwest
+(217$^\circ \pm$ 37$^\circ$), while swell events ($H_s = 0.41 \pm 0.43$ m, $t_p
+= 4.59 \pm 2.42$ s) are oriented southward (189$^\circ \pm$ 36$^\circ$). The
+combined total state is dominated by waves propagating eastward (201$^\circ \pm$
+36$^\circ$). In contrast, at Station 45007, wind-sea conditions are similar in
+energy ($H_s = 0.67 \pm 0.58$ m, $t_p = 3.78 \pm 1.14$ s) with a predominant
+direction of 189$^\circ \pm$ 36$^\circ$, whereas swell events ($H_s = 0.41 \pm$
+0.42 m, $t_p = 4.64 \pm$ 2.22 s) are mainly north-northeasterly (14$^\circ \pm$
+34$^\circ$). Consequently, the overall wave state at 45007 exhibits a dominant
+northeastward orientation (101$^\circ \pm$ 33$^\circ$), in contrast to the
+eastward dominance at 45002.
 
 \subsection{Validation of wave spectrum partitioning}
 \label{Validation of wave spectrum partitioning}
@@ -498,19 +515,19 @@ wave spectra, which introduces a relatively larger bias in the partitioning
 process. Among the different wave age factors, the 1.2 were selected as it
 presents the lowest RMSE and highest $R$ value than others.
 
-Comparing the two partitions at hindcast wave (Figure \ref{fig:fig4.4}) verse gauges
-(Figure \ref{fig:fig4.5}), several detailed patterns emerge. First, both stations show
-consistent behavior: First, the density plots reveal that most records cluster
-tightly along the 1:1 line, but at higher significant wave heights the
-partitioned values tend to fall below the hindcast reference, indicating a
-tendency toward underestimation in energetic sea states. Second, the color
-scaling in the plots represents the percentage of records, which highlights the
-dominance of small magnitudes waves ($Hs<1$) in the overall statistics and
-underscores that the observed bias at higher $H_s$ stems from relatively fewer
-but important extreme cases, especially for the gauges data in NDBC. Taken
-together, these results suggest that while NOAA–NDBC partitions are broadly
-reliable, their performance is more sensitive to wave-age tuning than the WIS
-hindcast.
+Comparing the two partitions at hindcast wave (Figure \ref{fig:fig4.4}) verse
+gauges (Figure \ref{fig:fig4.5}), several detailed patterns emerge. First, both
+stations show consistent behavior: First, the density plots reveal that most
+records cluster tightly along the 1:1 line, but at higher significant wave
+heights the partitioned values tend to fall below the hindcast reference,
+indicating a tendency toward underestimation in non-windsea partitions. Second,
+the color scaling in the plots represents the percentage of records, which
+highlights the dominance of small magnitudes waves ($Hs<1$) in the overall
+statistics and underscores that the observed bias at higher $H_s$ stems from
+relatively fewer but important extreme cases, especially for the gauges data in
+NDBC. Taken together, these results suggest that while NOAA–NDBC partitions are
+broadly reliable, their performance is more sensitive to wave-age tuning than
+the WIS hindcast.
 
 \subsection{Directional spectral wave climate in offshore regions}
 \label{Directional spectral wave climate in offshore regions}
@@ -530,7 +547,7 @@ Wave roses of significant wave height ($H_s$) from 2011 to 2023 at two NDBC
 buoys (45002 in the northern basin and 45007 in the southern basin; Figure
 \ref{fig:ndbc_hs_rose}a) reveal strong spatial contrasts in the directional wave
 climate of Lake Michigan. At the northern buoy (45002), the total wave field is
-clearly unimodal, dominated by southerly waves (S–SSW; Figure
+clearly uni-directional, dominated by southerly waves (S–SSW; Figure
 \ref{fig:ndbc_hs_rose}b). Most $H_s$ values fall between 0.4 and 1.2 m, but
 storm conditions occasionally produce waves exceeding 2 m from the southwest,
 reflecting the impact of intense southerly wind events over the limited fetch of
@@ -539,16 +556,16 @@ maintain similar southerly alignments (Figures \ref{fig:ndbc_hs_rose}c–d),
 although they differ in extreme wave height. Wind-sea has more extreme wave
 event ($H_s > 2$ m, the red bins in Figures \ref{fig:ndbc_hs_rose}c) from
 northern direction, while swell is generally smaller in the northern waves. By
-contrast, the southern buoy (45007) records a distinctly bidirectional regime.
+contrast, the southern buoy (45007) records a distinctly bi-directional regime.
 The total wave field shows nearly symmetric contributions from both the north
 and south (Figure \ref{fig:ndbc_hs_rose}e), with high-energy events above 2 m
-occurring more frequently than at the northern site. Wind-sea energy is
-distributed across both sectors (Figure \ref{fig:ndbc_hs_rose}f), highlighting
-the influence of strong local winds acting along the long north–south fetch.
-Swell waves also exhibit a pronounced bidirectional alignment (Figure
-\ref{fig:ndbc_hs_rose}g), with contributions occasionally exceeding 2 m, which
-underscores the southern basin’s exposure to long-distance wave propagation from
-both directions.
+occurring more frequently than at the northern site. Nevertheless, Wind-sea wave
+is distributed across both north and south sectors (Figure
+\ref{fig:ndbc_hs_rose}f), highlighting the influence of strong local winds
+acting along the long north–south directions. Swell waves also exhibit a
+pronounced bidirectional alignment (Figure \ref{fig:ndbc_hs_rose}g), with
+contributions occasionally exceeding 2 m, which underscores the southern basin’s
+exposure to long-distance wave propagation from both directions.
 
 \begin{figure}[htbp]
   \centering
@@ -564,19 +581,19 @@ both directions.
 The wave peak period ($T_p$) occurrence roses (Figure \ref{fig:ndbc_occ_rose}a)
 provide further evidence of these spatial differences by illustrating the
 spectral structure of the wave field. At the northern buoy (45002), wind-sea
-events are dominated by short peak periods ($T_p < 5$ s), consistent with local
+events are dominated by short peak periods ($T_p < 4$ s), consistent with local
 wave growth over limited fetches (Figures \ref{fig:ndbc_occ_rose}b–c). Swell
-waves, in contrast, extend into longer periods ($T_p \approx 6$–8 s), and they
+waves, in contrast, extend into longer periods ($T_p \approx 4$–6 s), and they
 are equally frequent and generally eqivlent with wind-sea (Figure
 \ref{fig:ndbc_occ_rose}d). Unlike wind-sea, swell also shows a broader
 directional spread, with secondary contributions from the west and east (see the
 pink regions in Figure \ref{fig:ndbc_occ_rose}d), suggesting occasional
 cross-lake or refracted wave propagation. At the southern buoy (45007), the
 bidirectional regime is even more evident in the period distributions. Wind-seas
-remain short-period ($T_p < 6$ s) but occur almost equally from the north and
+remain short-period ($T_p < 4$ s) but occur almost equally from the north and
 south (Figure \ref{fig:ndbc_occ_rose}f), consistent with frequent local
 generation in both fetch directions. Swell waves at this site extend into
-significantly longer periods ($T_p > 8$ s) and arrive from both directions
+significantly longer periods ($T_p > 4$ s) and arrive from both directions
 (Figure \ref{fig:ndbc_occ_rose}g), reflecting the ability of waves to propagate
 across the full lake length. The higher frequency of long-period swell in the
 south highlights its greater exposure to cross-basin forcing and long-fetch
@@ -586,7 +603,7 @@ Taken together, Figures \ref{fig:ndbc_hs_rose} and \ref{fig:ndbc_occ_rose}
 confirm a pronounced north–south asymmetry in Lake Michigan’s spectral wave
 climate. The northern basin is constrained by shorter fetches and dominated by
 southerly, short-period wind-seas with limited swell influence, while the
-southern basin is exposed to bidirectional forcing, producing a more energetic
+southern basin is exposed to bidirectional forcing, producing a more symmetric
 regime that includes both frequent wind-sea extremes and long-period swell from
 opposing directions. This spatial variability in wave height and period has
 direct implications for sediment transport, shoreline erosion, and long-term
@@ -614,20 +631,21 @@ swell, and wind-sea systems. At 45002, annual mean $H_s$ is relatively stable
 primarily associated with wind-sea (Figure \ref{fig:ndbc_annual}a). Swell $H_s$
 remains smaller and more consistent, reflecting the restricted fetch of the
 northern basin. In contrast, 45007 exhibits consistently higher $H_s$ (0.6–0.9
-m) with energetic years in 2012, 2016, and 2020, when annual averages of total
-and wind-sea waves exceeded 1.0 m (Figure \ref{fig:ndbc_annual}b). Annual $T_p$
-at 45002 is dominated by short periods (4–5 s for wind-sea, ~6 s for swell) with
-little variability (Figure \ref{fig:ndbc_annual}c), whereas 45007 records longer
-swell periods (6–8 s) with greater year-to-year variability, including
-occasional extremes exceeding 8 s (Figure \ref{fig:ndbc_annual}d). Directional
-patterns further emphasize the asymmetry: at 45002, all wave systems cluster
-around southerly directions (~200–220°; Figure \ref{fig:ndbc_annual}e),
-confirming its unimodal, fetch-limited character, while at 45007, annual mean
-$\theta_p$ oscillates between north (~0–20°) and south (~180–200°), particularly
-in the swell record (Figure \ref{fig:ndbc_annual}f). These results indicate that
-the northern basin is dominated by short-period, southerly wind-sea with limited
-variability, whereas the southern basin is more energetic, variable, and
-bidirectional, sustaining both frequent wind-sea extremes and long-period swell.
+m) with extreme years in 2014, 2020, and 2021, when annual averages of total and
+wind-sea waves exceeded 0.7 m (Figure \ref{fig:ndbc_annual}b). Annual $T_p$ at
+45002 is dominated by short periods (<4 s for wind-sea, 4-5 s for swell) with
+little variability (Figure \ref{fig:ndbc_annual}c), whereas 45007 records
+similar swell periods (4–5 s) with  little year-to-year variability. Both 45002
+and 45007 record occasional extremes exceeding 8 s (\eg 2017 in Figure
+\ref{fig:ndbc_annual}c-d). Directional patterns further emphasize the asymmetry:
+at 45002, all wave systems cluster around southerly directions (~175–225°;
+Figure \ref{fig:ndbc_annual}e), confirming its unimodal, fetch-limited
+character, while at 45007, annual mean $\theta_p$ oscillates between north
+(~0–20°) and south (~180–200°), particularly in the swell record (Figure
+\ref{fig:ndbc_annual}f). These results indicate that the northern basin is
+dominated by short-period, southerly wind-sea with limited variability, whereas
+the southern basin is more dynamic, variable, and bidirectional, sustaining both
+frequent wind-sea extremes and long-period swell.
 
 \begin{figure}[htbp]
   \centering
@@ -646,24 +664,27 @@ early winter, peaking in October–December when values often exceed 0.8 m (Figu
 \ref{fig:ndbc_month}a). This increase is mainly driven by wind-sea, while swell
 contributions remain secondary, underscoring the dominance of local storm
 forcing in the north. Monthly $T_p$ values at 45002 (Figure
-\ref{fig:ndbc_month}c) remain short throughout the year (~4–5 s for wind-sea,
-~6–7 s for swell), with only modest winter lengthening. Wave directions
+\ref{fig:ndbc_month}c) remain short throughout the year (~3–4 s for wind-sea,
+~4–5 s for swell), with only modest winter lengthening. Wave directions
 ($\theta_p$; Figure \ref{fig:ndbc_month}e) are persistently southerly (180–220°)
-in all months, reflecting the basin’s restricted geometry. By contrast, at
-45007, summer months are again relatively calm ($H_s \approx 0.4$ m), but
-October–December means often exceed 1.0 m, with both wind-sea and swell
-contributing substantially (Figure \ref{fig:ndbc_month}b). Peak periods at 45007
-lengthen in late autumn and winter, with swell $T_p$ frequently reaching 7–8 s
-(Figure \ref{fig:ndbc_month}d), reflecting long-period wave propagation across
-the full lake. Monthly directions (Figure \ref{fig:ndbc_month}f) confirm the
-strongly bidirectional nature of the southern basin: southerly waves dominate in
-spring and autumn, while northerly waves are frequent in summer and early
-winter. Swell, in particular, alternates between north (~0–30°) and south
-(~180–200°), highlighting the influence of opposing storm tracks and long-fetch
-dynamics. Collectively, these seasonal patterns reinforce the interannual
-findings: the northern basin remains consistently fetch-limited and southerly
-dominated, while the southern basin experiences stronger seasonality, greater
-energy, longer swell periods, and alternating bidirectional forcing.
+in summer and fall, are shifting to northerly in spring seasons (\eg March and
+April in Figure \ref{fig:ndbc_month}e). Similarly, at 45007, summer months are
+again relatively calm ($H_s \approx 0.4$ m), but October–December means often
+exceed 1.0 m, with both wind-sea and swell contributing substantially (Figure
+\ref{fig:ndbc_month}b). Peak periods at 45007 lengthen in late autumn and
+winter, with swell $T_p$ frequently reaching 7–8 s (Figure
+\ref{fig:ndbc_month}d), reflecting long-period wave propagation across the full
+lake. Monthly directions (Figure \ref{fig:ndbc_month}f) confirm the strongly
+bidirectional nature of the southern basin: southerly waves dominate in spring
+and autumn, while northerly waves are frequent in summer and early winter.
+Swell, in particular, alternates between north (~0–30°) and south (~180–200°),
+highlighting the influence of opposing storm tracks and long-fetch dynamics.
+Notably, during some months (\eg Jul, Aug), the swells and wind-seas have
+opposite wave directions where swells come from north but wind-sea from south
+Collectively, these seasonal patterns reinforce the interannual findings: the
+northern basin remains consistently fetch-limited and southerly dominated, while
+the southern basin experiences stronger seasonality, greater energy, longer
+swell periods, and alternating bidirectional forcing.
 
 \section{Discussions}
 \label{c4_Discussions}
@@ -693,10 +714,10 @@ larger waves along the eastern shoreline compared to the western shoreline. This
 east–west asymmetry is primarily driven by the prevailing southeasterly winds
 during winter months, which generate longer fetches and stronger wave growth
 along the eastern coasts \citep{huang_wave_2021,abdelhady_shoreline_2025}.
-Wind-sea waves show a spatial distribution that largely mirrors the total wave
-field (Figure \ref{fig:nearshore_system}b). The eastern nearshore consistently
-receives higher wind-sea heights, whereas the western shorelines are more with
-smaller wind-sea waves. In contrast, swell waves (Figure
+Wind-sea waves show a spatial distribution that is largely similar to the total
+wave field (Figure \ref{fig:nearshore_system}b). The eastern nearshore
+consistently receives higher wind-sea heights, whereas the western shorelines
+are more with smaller wind-sea waves. In contrast, swell waves (Figure
 \ref{fig:nearshore_system}c) appear more uniformly distributed across the lake’s
 nearshore regions. Their magnitudes, however, remain smaller than those of
 wind-sea waves: while wind-sea $H_s$ typically ranges between 0.6–0.8 m, swell
@@ -786,10 +807,10 @@ summarize at reach and county scales, and compare patterns across scales.
 
 This analysis depends on several predefined hyperparameters that govern the
 partitioning outcomes. First, the \emph{wave aging factor}—introduced earlier—is
-a key control on the swell–wind–sea separation. Although multiple values were
-compared and an optimal factor was selected and “validated” in
-Section~\ref{Validation of wave spectrum partitioning}, that evaluation relied
-on agreement with the WIS hindcast (WAM configuration). In other words, it is a
+a key control on the swell–windsea separation. Although multiple values were
+compared and an optimal factor was selected and validated in Section
+\ref{Validation of wave spectrum partitioning}, that evaluation relied on
+agreement with the WIS hindcast (WAM configuration). In other words, it is a
 model–to–model comparison rather than a validation against observed swell and
 wind–sea conditions.
 
