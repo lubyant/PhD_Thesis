@@ -3,6 +3,65 @@
 \chapter{Appendix}
 \label{Appendix}
 
+\section{Wave routing method}
+\label{Wave routing method}
+
+The wave routing method is an approximate approach for estimating wave breaking
+as waves propagate from offshore to nearshore. It assumes that wave energy is
+conserved during propagation prior to breaking, neglecting dissipation
+processes. Under this assumption, wave transformation follows Snell’s Law
+(Equation \ref{eq:snell_law}) and the principle of conservation of wave energy
+(Equation \ref{eq:energy_conservation}), expressed as:
+
+\begin{equation}
+  \frac{\sin \alpha_1}{\sin \alpha_2} = \frac{L_1}{L_2}
+\label{eq:snell_law}
+\end{equation}
+
+where $\alpha_1$ and $\alpha_2$ denote the wave angles at the source and target
+locations, and $L_1$ and $L_2$ are the corresponding wavelengths.
+
+\begin{equation}
+  \frac{H_1}{H_2} = (\frac{\cos \alpha_1}{\cos \alpha_2})^{\frac{1}{2}}
+  (\frac{n_1L_1}{n_2L_2})^{\frac{1}{2}}
+\label{eq:energy_conservation}
+\end{equation}
+
+where $H_1$ and $H_2$ are the wave heights at the source and target locations,
+and $n_1$ and $n_2$ are coefficients defined as
+
+
+where $H_1$ and $H_2$ are the wave heights at source and target locations, $n_1$
+and $n_2$ are the coefficients expressed as,
+\begin{equation}
+  n = \frac{1}{2}(1+\frac{2kd}{\sinh 2kd})
+\label{eq:coefficient}
+\end{equation}
+where $k$ is the wave number and $d$ is the water depth at curren tposition.
+
+The method is implemented iteratively, advancing step by step from the source
+location (typically in deep water) toward the target location (typically in
+shallow water). At each step, wave angles and heights are updated using
+Equations \ref{eq:snell_law} and \ref{eq:energy_conservation}. Wave breaking is
+then evaluated using Goda’s empirical formulation \citep[Equation
+\ref{eq:goda};][]{goda1970synthesis,rattanapitikon2000verification}:
+
+\begin{equation}
+  \frac{H_b}{L_0} = \frac{1}{7} \left\{ 1 - \exp(\frac{\pi d_b}{L_0}(16.21m^2-7.07m-1.55)) \right\} 
+\label{eq:goda}
+\end{equation}
+
+where $L_0$ is the offshore wavelength, $d_b$ is the water depth at the breaking
+point, $H_b$ is the breaking wave height, and $m$ represents the average bottom
+slope.
+
+To improve computational efficiency, a binary search strategy may be applied.
+Instead of scanning linearly from deep water to shallow water, the breaking
+location can be determined more efficiently by iteratively bisecting the search
+interval.
+
+\section{Supplymentary figures and tables}
+\label{Supplymentary figures and tables}
 
 \begin{figure}[htbp]
   \centering
@@ -25,5 +84,6 @@
   \label{fig:fig3.3a}
 \end{figure}
 
+\input{appendix/resources/pca_loadings.tex}
 \input{appendix/resources/oak_indicator.tex}
 \input{appendix/resources/whitting_indicator.tex}

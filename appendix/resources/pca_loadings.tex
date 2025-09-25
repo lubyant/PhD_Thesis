@@ -1,0 +1,27 @@
+% Requires: \usepackage{booktabs, siunitx}
+\begin{table}[htbp]
+\centering
+\caption{PCA loadings for the first three principal components. Bold values indicate the highest absolute loading per component.}
+\label{tab:pca_loadings}
+\sisetup{table-format=1.3, table-number-alignment = center}
+\begin{tabular}{l S S S}
+\toprule
+Variable & {PC1} & {PC2} & {PC3} \\
+\midrule
+CWIH              &  0.029 & -0.155 &  \textbf{0.423} \\
+bluff\_h          &  0.222 & -0.257 &  0.432 \\
+shore\_long       &  0.107 &  0.437 &  0.204 \\
+shore\_short      &  0.018 &  0.194 & -0.194 \\
+crest\_long       &  0.025 &  0.332 &  0.264 \\
+crest\_short      & -0.006 &  0.220 &  0.208 \\
+toe\_long         &  0.126 & \textbf{0.498} &  0.246 \\
+toe\_short        &  0.052 &  0.242 & -0.194 \\
+beach\_width\_long  &  0.034 &  0.263 &  0.097 \\
+beach\_width\_short &  0.038 &  0.254 &  0.094 \\
+bluff\_width\_long  &  0.666 & -0.094 & -0.073 \\
+bluff\_width\_short &  \textbf{0.681} & -0.076 & -0.085 \\
+bluff\_slope\_long  & -0.061 & -0.176 &  0.385 \\
+bluff\_slope\_short & -0.073 & -0.194 &  0.407 \\
+\bottomrule
+\end{tabular}
+\end{table}
