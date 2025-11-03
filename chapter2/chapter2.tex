@@ -310,10 +310,11 @@ lakeward changes are presented as positive values.
 \subsection{Wave Impact Height Estimation} 
 \label{Wave Impact Height Estimation}
 
-Wave Impact Height (WIH) is known to be a primary control on coastal erosion,
-and it is defined as the elevation difference between land features (bluff toe
-elevation) and dynamic water level \citep[water level plus wave runup and wind
-setup; ][]{ruggiero_wave_2001,swenson_bluff_2006}. WIH the is calculated at each
+Wave Impact Height (WIH, Equation \ref{eq:eq2.1}) is known to be a primary
+control on coastal erosion, and it is defined as the elevation difference
+between land features (bluff toe elevation) and dynamic water level \citep[water
+level plus wave runup and wind setup;
+][]{ruggiero_wave_2001,swenson_bluff_2006}. WIH the is calculated at each
 transect using the method provided by \citet{swenson_bluff_2006}. To simplify
 our calculation, the wind setup was removed from the calculation due to its
 insignificant contribution to overall WIH. Hourly wave hindcast was obtained for
@@ -331,29 +332,33 @@ measurement ensembles. To further account for the frequency of large wave action
 such as storms and surges, cumulative wave impact height
 \citet{swenson_bluff_2006} is applied in this study as aggregation of positive
 WIH for the period from 1995-2014 based on the temporal extent of the wave data,
-and integrated to obtain an hourly average index CWIH. 
+and integrated to obtain an hourly average index $\overline{CWIH}$. 
 
-Water level fluctuations are the main ro-environment of Lake Michigan mainly
-experiences both long-term water level fluctuation and short-term water level
-oscillations. Regarding the long-term changes, nearly 2 m of water level
-alternation has been systematically documented in Lake Michigan over annual and
-decadal timescales \citep{quinn1990lake,gronewold2014water}. Water level changes
-are a result of regional water budget balance between over-lake precipitation,
-over-lake evaporation, tributary runoff, diversions, and channel flows into and
-out of the basin \citep{gronewold_hydrological_2016}. The long-term (1918-2020)
-lake-wide annual average water level on Lake Michigan is 176.44 m above IGLD85.
-The lake-wide month average record high of 177.50 m was recorded in October
-1986, and the record low water level of 175.57 m occurred in January 2013, a
-difference of 1.93 m \citep{gronewold2013dynamic}.  Regimes of high and low
-water levels tend to cycle over several decades on Lake Michigan. Above average
-water levels persisted from 1943-1956, 1972-1998, and 2015-present (2020) while
-below average water levels occurred between 1937-1943, 1956-1972, and 1999-2013.
-As for the short-term water level change, it  has been documented over a matter
-of months on Lake Michigan; for example, a strong El Nino event in 1999
-increased surface water temperature and evaporation rates, resulting in a water
-level drop of 0.92 m \citep{assel2004hydroclimatic}, and a record-setting winter
-ice cover, increased precipitation, and runoff contributed to a water level rise
-of 0.97 m from January 2013 to December 2014
+\begin{equation}
+    WIH = SWL + W_s + R^* - TOE
+    \label{eq:eq2.1}
+\end{equation}
+
+Lake Michigan mainly experiences both long-term water level fluctuation and
+short-term water level oscillations. Regarding the long-term changes, nearly 2 m
+of water level alternation has been systematically documented in Lake Michigan
+over annual and decadal timescales \citep{quinn1990lake,gronewold2014water}.
+Water level changes are a result of regional water budget balance between
+over-lake precipitation, over-lake evaporation, tributary runoff, diversions,
+and channel flows into and out of the basin \citep{gronewold_hydrological_2016}.
+The long-term (1918-2020) lake-wide annual average water level on Lake Michigan
+is 176.44 m above IGLD85.  The lake-wide month average record high of 177.50 m
+was recorded in October 1986, and the record low water level of 175.57 m
+occurred in January 2013, a difference of 1.93 m \citep{gronewold2013dynamic}.
+Regimes of high and low water levels tend to cycle over several decades on Lake
+Michigan. Above average water levels persisted from 1943-1956, 1972-1998, and
+2015-present (2020) while below average water levels occurred between 1937-1943,
+1956-1972, and 1999-2013.  As for the short-term water level change, it  has
+been documented over a matter of months on Lake Michigan; for example, a strong
+El Nino event in 1999 increased surface water temperature and evaporation rates,
+resulting in a water level drop of 0.92 m \citep{assel2004hydroclimatic}, and a
+record-setting winter ice cover, increased precipitation, and runoff contributed
+to a water level rise of 0.97 m from January 2013 to December 2014
 \citep{gronewold_hydrological_2016}.  Wind induced waves are primary drivers of
 coastal change in southeastern Wisconsin.  Though wave conditions vary somewhat
 throughout the study area, waves approach most often from the southeast and
@@ -371,24 +376,26 @@ standing waves) and storm surges \citep{rao1976surface,as2004high}.
 \subsection{Domain and County scale CGC} 
 \label{Domain and County scale CGC}
 
-Domain and county scale CGC  results are summarized in Table \ref{tab:tab2.3}.
+Domain and county scale CGC results are summarized in Table \ref{tab:tab2.3}.
 Over the entire study area, the average bluff crest recession rate for the
 1937-2020 period is -0.22 m/year, the average bluff toe recession rate is -0.17
 m/year, and shoreline recession rate is -0.16 m/year. For the 1995-2020 period,
 the average recession rates for the bluff crest, bluff toe, and shoreline are
 -0.22, -0.15, and -0.32 m/year, respectively. Among shoreline, bluff toe and
 bluff crest, shoreline recession rates exhibit greater variance, between -0.06
-m/year in Milwaukee County to -0.40 m/year in Kenosha County from 1937-2020.
-With the exception of Kenosha County, county-level average shoreline recession
-rates from 1995 to 2020 were higher than those observed over the 1937 to 2020
-period. This suggests an acceleration in shoreline retreat in recent decades.
-The bluff crest, bluff toe, and shoreline in all counties exhibited consistent
-erosional trends over both the long-term period (1937–2020) and the more recent
-short-term period (1995–2020). Besides the CGC, the long-term and short-term
-average of beach width and bluff slopes are also reported in Table
-\ref{tab:tab2.4}. In contrast to coastal CGC, the differences between long-term
-and short-term trends in beach width and bluff face slope are minimal,
-suggesting that bluff and beach have remained relatively stable over time.
+m/year in Racine County to -0.40 m/year in Ozaukee County from 1937-2020. With
+the exception of Ozaukee County, county-level average shoreline recession rates
+from 1995 to 2020 were higher than those observed over the 1937 to 2020 period.
+This suggests an acceleration in shoreline retreat in recent decades. The bluff
+crest, bluff toe, and shoreline in all counties exhibited consistent erosional
+trends over both the long-term period (1937–2020) and the more recent short-term
+period (1995–2020). Besides the CGC, the long-term and short-term average of
+beach width and bluff slopes are also reported in Table \ref{tab:tab2.4} in the
+appendix section in supplementary document. In contrast to coastal CGC, the
+differences between long-term and short-term trends in beach width and bluff
+face slope are minimal, suggesting that these components of bluff and beach have
+remained relatively stable over time.
+
 \input{chapter2/resources/table2-3.tex} 
 \input{chapter2/resources/table2-4.tex}
 
@@ -593,39 +600,41 @@ bluffed coast, continued eroding rapidly, with a bluff toe recession rate of
 \caption{Bluff toe recession rate and cumulative wave impact height for local
 (a), reach (b) and county (c) scales for the period of 1995-2020. Heavy and mild
 erosion are distinguished as values greater/less than 0.2 m/year, respectively,
-and large/small (CWIH) are differentiated by values greater/less than 0.5
+and large/small $\overline{CWIH}$  are differentiated by values greater/less than 0.5
 m/day.} 
 \label{fig:fig2.7} 
 \end{figure}
 
-Cumulative wave impact height (CWIH) is used in this study as metric for the
-combined forces of water level and wave action at the bluff toe. Several other
-studies have found CWIH or other similar metrics of wave forcing to correlate
-with bluff or shoreline erosion
-\citep{ruggiero_wave_2001,brown_factors_2005,lin_field_2014}. Though (CWIH)
-alone cannot explain bluff behavior at an individual transect location with
-statistical accuracy \citep{swenson_bluff_2006}, aggregated results at broader
-spatial scales provide a clearer picture (Figure \ref{fig:fig2.7}).  At the
-reach scale, large CWIH values correspond to higher bluff toe recession rates
-for reaches 5, 7, and 8, though several reaches with relatively higher wave
-impact demonstrated little bluff toe recession from 1995-2015 (reaches 2,3,6).
-However, at the county scale (Figure \ref{fig:fig2.7}c) and local scale (Figure
-\ref{fig:fig2.7}a), (CWIH) values do not provide a clear trend in which larger
-(CWIH) corresponds to increased toe recession.  We hypothesize that the
-increasing predictive capability of (CWIH) with spatial scale is due to two main
-factors. First, the parameters considered in the calculation of (CWIH) gain
-greater spatial uniformity with scale. Shoreline orientation, bluff toe
-elevation, and nearshore slope may have some degree of local variation, but tend
-to fall around a central value at larger scale, while the Lake Michigan water
-level is assumed spatially constant over the study area at a given time. Second,
-the geomorphic processes governing bluff and beach erosion occur at regional and
-reach scales, are impacted by processes in neighboring areas and geologic
-inheritance, and may be subaqueous or subaerial in nature. Thus, it must be
-recognized that (CWIH), while useful in understanding hydrodynamic forcing over
-time, is scale-dependent in its ability to provide insight into coastal
-geomorphic behavior. Further, (CWIH) does not explicitly account for the human
-influences, geologic differences, or sediment budget processes that are vital to
-understanding the geomorphic evolution of coastlines at the local level.  
+Cumulative wave impact height $\overline{CWIH}$ is used in this study as metric
+for the combined forces of water level and wave action at the bluff toe. Several
+other studies have found $\overline{CWIH}$ or other similar metrics of wave
+forcing to correlate with bluff or shoreline erosion
+\citep{ruggiero_wave_2001,brown_factors_2005,lin_field_2014}. Though
+$\overline{CWIH}$ alone cannot explain bluff behavior at an individual transect
+location with statistical accuracy \citep{swenson_bluff_2006}, aggregated
+results at broader spatial scales provide a clearer picture (Figure
+\ref{fig:fig2.7}).  At the reach scale, large $\overline{CWIH}$ values
+correspond to higher bluff toe recession rates for reaches 5, 7, and 8, though
+several reaches with relatively higher wave impact demonstrated little bluff toe
+recession from 1995-2015 (reaches 2,3,6).  However, at the county scale (Figure
+\ref{fig:fig2.7}c) and local scale (Figure \ref{fig:fig2.7}a), $\overline{CWIH}$
+values do not provide a clear trend in which larger $\overline{CWIH}$
+corresponds to increased toe recession.  We hypothesize that the increasing
+predictive capability of $\overline{CWIH}$ with spatial scale is due to two main
+factors. First, the parameters considered in the calculation of
+$\overline{CWIH}$ gain greater spatial uniformity with scale. Shoreline
+orientation, bluff toe elevation, and nearshore slope may have some degree of
+local variation, but tend to fall around a central value at larger scale, while
+the Lake Michigan water level is assumed spatially constant over the study area
+at a given time. Second, the geomorphic processes governing bluff and beach
+erosion occur at regional and reach scales, are impacted by processes in
+neighboring areas and geologic inheritance, and may be subaqueous or subaerial
+in nature. Thus, it must be recognized that $\overline{CWIH}$, while useful in
+understanding hydrodynamic forcing over time, is scale-dependent in its ability
+to provide insight into coastal geomorphic behavior. Further, $\overline{CWIH}$
+does not explicitly account for the human influences, geologic differences, or
+sediment budget processes that are vital to understanding the geomorphic
+evolution of coastlines at the local level.  
 
 
 \subsection{Hotspots of coastal change and causality} 
@@ -637,7 +646,7 @@ understanding the geomorphic evolution of coastlines at the local level.
 \caption{Bluff toe recession rate and cumulative wave impact height for local
 (a), reach (b) and county (c) scales for the period of 1995-2020. Heavy and mild
 erosion are distinguished as values greater/less than 0.2 m/year, respectively,
-and large/small (CWIH) are differentiated by values greater/less than 0.5
+and large/small $\overline{CWIH}$ are differentiated by values greater/less than 0.5
 m/day.} 
 \label{fig:fig2.8} 
 \end{figure} 
@@ -707,7 +716,28 @@ current reach delineations were originally proposed by
 evaluate the spatial uniformity of coastal characteristics, a clustering
 analysis was conducted using long-term and short-term change rates of the bluff
 toe, bluff crest, shoreline, and beach width, along with bluff height, measured
-across 100-meter transects. Principal Component Analysis (PCA) was employed to
+across 100-meter transects. 
+\[
+M =
+\begin{bmatrix}
+x_{11} & x_{12} & \cdots & x_{1,12} \\
+x_{21} & x_{22} & \cdots & x_{2,12} \\
+\vdots & \vdots & \ddots & \vdots   \\
+x_{n1} & x_{n2} & \cdots & x_{n,12}
+\end{bmatrix}
+\in \mathbb{R}^{n \times 12}
+\]
+
+\[
+\begin{array}{lll}
+x_{i1}  = \text{$\overline{CWIH}$}               & x_{i2}  = \text{bluff\_height}      & x_{i3}  = \text{shore\_long} \\
+x_{i4}  = \text{shore\_short}       & x_{i5}  = \text{crest\_long}        & x_{i6}  = \text{crest\_short} \\
+x_{i7}  = \text{toe\_long}          & x_{i8}  = \text{toe\_short}         & x_{i9}  = \text{beach\_width\_long} \\
+x_{i10} = \text{beach\_width\_short}& x_{i11} = \text{bluff\_slope\_long} & x_{i12} = \text{bluff\_slope\_short} \\
+\end{array}
+\]
+
+Principal Component Analysis (PCA) was employed to
 reduce the dimensionality of the dataset, and the K-means clustering algorithm
 was subsequently applied to the top three principal components. The number of
 clusters (K) was tested across a range from 3 to 14, with five clusters selected
@@ -728,20 +758,37 @@ cluster. Clustering results demonstrate greater uniformity at the reach scale
 consistency at the reach level highlights the importance of conducting
 multiscale analyses for effective coastal management. County boundaries are
 typically defined based on historical or political considerations and may not
-reflect coastal geomorphological characteristics. Therefore, reach-level
-subdivisions are essential for delineating zones with similar coastal features,
-thereby enhancing the precision of management strategies. However, defining
-reach boundaries requires substantial expertise in coastal geology and
-geomorphology. The current reach delineations, established in the previous
-century, exhibit limitations in certain areas. For instance, Reaches 4 and 5
-(Figure \ref{fig:fig2.9}) display similar clustering patterns and could
-potentially be merged into a single reach.  Conversely, Reach 8 exhibits
-substantial spatial variability between its northern and southern segments,
-suggesting a need for further subdivision.
+reflect coastal geomorphological characteristics. 
+
+Conversely, the reach-level division is a deliberately designed coastal zone
+based on similar coastal characteristics, making it a more appropriate and
+adaptable framework for effective coastal management. For instance, this
+approach is particularly advantageous when assessing coastal hazard risks, as
+the relative homogeneity of local conditions within each reach allows for
+reasonable assumptions of similar risk levels, thereby reducing the complexity
+and effort required for evaluation
+\citep{torresan2008assessing,tsai_monitoring_2022}. Nevertheless, an
+inappropriate reach design may result in misclassification or grouping for
+coastal features, potentially misleading engineers and analysts during
+subsequent evaluations. For instance, as illustrated in Figure
+\ref{fig:fig2.9}b, Reaches 10 and 11 exhibit comparable clustering
+characteristics and could be more effectively represented as a single unified
+reach. In contrast, Reaches 8 and 9 demonstrate pronounced spatial heterogeneity
+between their northern and southern sections, indicating the necessity for
+further refinement or subdivision. To improve the division of reaches, Figure
+\ref{fig:fig2.9}c presents a revised division in which Reaches 10 and 11 are
+merged to form a single reach with more consistent coastal characteristics,
+while the boundaries of Reaches 8 and 9 are adjusted to achieve greater
+uniformity in coastal features. In summary, a multifactor clustering framework
+offers a systematic and data-driven method for reach classification, thereby
+enhancing the accuracy and strategic value of coastal management practices.
+
 
 \begin{figure}[htbp] \centering
-\includegraphics[width=0.8\textwidth]{chapter2/resources/figure2-9.jpg}
-\caption{Clustering of coastal geomorphological features.} 
+\includegraphics[width=0.8\textwidth]{chapter2/resources/figure2-9.png}
+\caption{Multifactor clustering analysis. (a) Clustering of coastal
+geomorphological features; (b) zoom view of Reach 8,9,10, and 11; (c) proposed
+new division of reach 8*,9*,10*/11*.} 
 \label{fig:fig2.9}
 \end{figure}
 
@@ -817,24 +864,51 @@ highly variable nature of the system, which is sensitive to nearshore and wave
 climate conditions, backshore geology, sediment budget conditions, and local
 perturbations to the system. 
 
-\subsection{limitations of CGC analysis} 
+\subsection{Applications in management, limitations, and future works} 
 \label{limitations of CGC analysis}
+This study provides public with a dataset of coastal geomorphic changes. Part of
+this dataset (up to 2015) was published into the Wisconsin Shoreline Inventory \&
+Oblique Photo Viewer. Beyond
+serving as a scientific archive, the Viewer has become a practical management
+tool: it is incorporated into the Wisconsin State Hazard Mitigation Plan to
+support flood risk assessments, mitigation project scoping, and FEMA grant
+applications. At the county and municipal
+scale, the Viewer is used to communicate erosion hazards to property owners
+and is cited in local hazard mitigation planning
+documents for Milwaukee and Racine Counties, where it provides baseline evidence
+for prioritizing vulnerable reaches and informing shoreline stabilization
+strategies. By integrating long-term imagery, inventories, and
+quantitative recession rates, the Viewer bridges scientific datasets with
+coastal management practice, enabling evidence-based decision making across
+multiple levels of governance.
 
 This study has two primary limitations. First, the analysis of CGC is based
 predominantly on historical aerial imagery, which is constrained by both the
 availability and quality of the data. Only seven temporal snapshots—spanning the
 1930s, 1950s, 1970s, 1990s, 2000s, 2010s, and 2020s—were included; imagery from
-the 1940s, 1960s, and 1980s was unavailable. Additionally, the temporal
+the 1940s, 1960s, 1980s, and post-2020 was unavailable. In particular, the
+absence of recent imagery after 2020, due to unavailability of SWERPC imagery,
+limits current research and engineering applications, highlighting the need for
+future efforts focused on data acquisition (e.g., extend imagery after 2020),
+characterization (e.g., automatic coastal characterization by AI), and analysis
+(e.g., incorporate water level and wave climate). Additionally, the temporal
 resolution of the dataset is uneven, with imagery acquired approximately every
 five years after the 1990s, but only at decadal intervals prior to that period.
-Second, the influence of water level fluctuations on shoreline change rates
-could not be fully accounted for. Fluctuations in water level may affect the
-interpretation of shoreline positions in historical aerial imagery. To address
-this limitation, future analyses should incorporate bathymetric profiles
-corresponding to the same years as the imagery and calibrate shoreline positions
-relative to a standardized water level. This approach would allow shoreline
-erosion rates to more accurately reflect changes in coastal morphology and be
-less affected by variations in water level.
+The unavailability and uneven distribution of data may constrain analyses, for
+instance, hindering efforts to reconstruct historical shoreline changes or to
+evaluate climate-induced erosion processes during those intervals. Second, the
+influence of water level fluctuations on shoreline change rates could not be
+fully accounted for. Variations in lake levels can influence how shoreline
+positions are interpreted from historical aerial imagery. In southeastern Lake
+Michigan, water levels rose by about 2 m between 2013 and 2020
+\citep{gronewold_hydrological_2016}. With an average beach slope of 0.072, this
+increase could exaggerate shoreline retreat by approximately 5 m/yr within this
+period \citep{troy_rapid_2021}. To address this limitation, future analyses
+should incorporate bathymetric profiles corresponding to the same years as the
+imagery (which was not available in most of years) and calibrate shoreline
+positions relative to a standardized water level. This approach would allow
+shoreline erosion rates to more accurately reflect changes in coastal morphology
+and be less affected by variations in water level.
 
 \section{Conclusion} 
 \label{Conclusion} 
@@ -861,7 +935,7 @@ bluffed coast  predominantly focuses on modeled cumulative wave impact height,
 an index of wave forces acting at the bluff toe. Cumulative wave impact height
 is found to correlate positively with bluff toe recession at broader county and
 reach scales but does not correspond to higher bluff toe recession rate at
-the100 m local spatial scale. We hypothesize this is due to the greater
+the 100 m local spatial scale. We hypothesize this is due to the greater
 uniformity of subaqueous forces and bluff recession when spatially aggregated,
 while recession measured at smaller spatial scales is increasingly dependent on
 more variable and localized sediment transport processes, nearshore wave
@@ -873,4 +947,4 @@ geomorphic processes occur. As is demonstrated in this paper, the scale of
 measurement and aggregation not only affects measurement results, but also
 influences conclusions regarding the root cause of geomorphic changes. Along
 geologically heterogenous coasts with dense coastal defenses, such as those in
-the Great Lakes, the importance of scale is even more pronounced. 
+the Great Lakes, the importance of scale is even more pronounced.
