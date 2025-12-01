@@ -21,14 +21,14 @@ crucial role in shaping and controlling the evolution of coastal morphology. For
 example, wave climate can drive nearshore sediment transport, which causes
 severe beach erosion and bluff failure
 \citep{benumof_relationship_2000,brown_factors_2005,lamoe_wave_1989}. Beach
-erosion and bluff failure are two coastal hazards which is able to pose
+erosion and bluff failure are two coastal hazards which are able to pose
 substantial losses to coastal communities \citep{buck2025living}, infrastructure
 \citep{adshead2024climate,steven2023coastal}, and local economies
 \citep{nopiana2024estimating,gopalakrishnan2016economics,landry2011coastal}.
 Last but not least, wave climate can impact the health of coastal natural
 habitats \citep{meadows_cumulative_2005}. In the Great Lakes, lake trout, an
 economically significant species, often spawn in areas with high wave-induced
-turbulence.  This turbulence, driven by high speeds wave climate, plays a
+turbulence.  This turbulence, driven by high speed wave climate, plays a
 crucial role in enhancing oxygen dissolution in the water and preventing egg
 smothering by fine sediments
 \citep{fitzsimons_relationship_2014,sly_interstitial_1988}. In summary, wave
@@ -40,8 +40,8 @@ Wave systems climate is a characteristic of wave energy using directional wave
 energy spectrum. Conventional wave climate analysis primarily focuses on key
 wave statistics, such as wave height and wave period
 \citep{resio2002meteorology,casas2024wind}. Nevertheless, this approach can
-sometimes be limited in scope, as it overlooks the directional distribution of
-wave energy, which is essential for understanding complex coastal and oceanic
+sometimes be limited in scope, as it overlooks the directionalty and modality of
+wave energy spectra, which is essential for understanding complex coastal and oceanic
 processes \citep{kamphuis2020introduction,komar1998modeling}. Wave system can
 address this limitation by employing wave spectrum partitioning techniques that
 splits wave spectrum into distinct components, which corresponds to their
@@ -57,7 +57,7 @@ that have propagated over long distances from their generation area, often
 originating from distant storms or weather systems \citep{alford_internal_2001}.
 In the directional wave spectrum, the energy of swells is generally concentrated
 in the low-frequency region, while the energy of wind-sea waves usually occupies
-in the higher frequency region, reflecting their difference in terms of wave
+ the higher frequency region, reflecting their difference in terms of wave
 length and speed \citep{george_nearshore_2020,vettor_global_2020}.
 Understanding directionality and states of the wind-waves (swell or wind-sea) is
 crucial for characterizing directional spectral wave climates, as the states and
@@ -86,7 +86,7 @@ state. For the first step, the partitioning algorithms can be broadly classified
 into two main categories based on the dimensions of the wave spectrum they
 analyze: one-dimensional and two-dimensional algorithms
 \citep{portilla_spectral_2009}. One-dimensional partitioning algorithm
-disregards wave directionality and instead differentiates different wave systems
+disregard wave directionality and instead differentiates different wave systems
 by applying frequency-based criteria for decomposition. For example, a common
 one-dimensional partition algorithm is spectrum peak method, where each local
 peak of energy spectrum will be identified as an independent peak of wave system
@@ -123,14 +123,14 @@ wave spectrum analysis to wave climate research was conducted by
 \citet{hanson_automated_2001}, where they presented a systematic workflow
 encompassing spectral partitioning, swell tracking, and source storm
 identification over a series of spectra data in Gulf of Alaska. However, this
-approach requires tracking the swell event across the spectra in different
+approach requires tracking the swell event across the spectra in the different
 timestamps, which is sometimes hard to implement. To reduce the complexity,
 \citet{portilla-yandun_wave_2015,portilla-yandun_climate_2016} further advanced
 this approach by introducing an occurrence map to illustrate the statistical
 distribution of local wind-sea and remote swell in Pacific Ocean. With these
 approaches, wave spectral analysis has since been applied extensively to
 characterize wave climates across various spatial and temporal scales. Studies
-have explored regional wave climates, such as those in local scales
+have explored the regional wave climates, such as those in local scales
 \citep{romano-moreno_multimodal_2023,venolia_historical_2024,zheng_investigation_2024}
 and the regional scale
 \citep{jiang_wave_2019,langodan_unraveling_2018,portilla-yandun_climate_2016,stopa2016comparison}
@@ -150,7 +150,7 @@ techniques which applied in oceanic areas, serving as the primary motivation for
 this study.
 
 The objective of this chapter is to characterize the climate of wave systems in
-Lake Michigan by wave spectrum partitioning. To archive this, the directional
+Lake Michigan by wave spectrum partitioning. To achieve this, the directional
 energy spectrum will be contructed using NDBC data from the 2011 to 2023. Wave
 system partitioning will be applied to the spectra in the offshore of Lake
 Michigan buoys (NDBC) to obtain wave systems (wind-sea and swell). The results
@@ -217,7 +217,7 @@ directional bands and 28 frequency bins, with frequency intervals based on ratio
 0.0611 Hz. The wave climate data (\eg significant wave height, peak period) were
 derived from the directional wave spectral data, with wind sea and swell
 components partitioned using the method of WAM model
-\citep{komen_dynamics_1994}. Here is the rule of Komen's WAM model:
+\citep{komen_dynamics_1994}. The rule of Komen's WAM model is presented as follows:
 
 \begin{equation}
     Check = f\frac{28\times u_*}{c(m)}(\cos(\theta_{wave}(k)-\theta_{wind}))
@@ -259,7 +259,7 @@ documented during ice-free seasons since 2011 for both 45002 and 45007 (see
 Figure \ref{fig:fig4.2}). The spectral data provided by the hull encompasses
 spectral wave density, mean wave direction, principal wave direction, and two
 directional Fourier coefficients. The NDBC buoys did not measure a directional
-wave spectrum, instead, construct by the Fourier analysis
+wave spectrum, instead, is constructed by the Fourier analysis of the wave time series
 \citep{longuet-higgins_observations_1961}. Here is the procedure of constructing
 directional spectra.
 
@@ -339,7 +339,7 @@ statement.
 \end{equation}
 
 Where $\beta$ is age factor, $U_z$ is the wind speed at elevation $z$, $c_p$ is
-the phrase speed determined by dispersion relationship, $\theta$ is wave
+the phase speed determined by dispersion relationship, $\theta$ is wave
 direction, and $\varphi$ is wind direction. This approach follows Komen’s WAM
 configuration, which is also utilized in the WIS framework (as outlined in
 Equation \ref{eq:eq4.1}). In this study, the number of partitions was set to
@@ -383,7 +383,7 @@ across the entire time series from 2011 onward and counting the frequency of
 occurrences of these peaks within the frequency-direction domain. This
 distribution of occurrences within the frequency-direction domain is 
 subsequently used to analyze various aspects, including wave directionality,
-modality, inter-annual trends, and intra-annual trends. Meanwhile, at each timestamps,
+modality, inter-annual trends, and intra-annual trends. Meanwhile, at each timestamp,
 wave system will be classified into three different conditions: wind-sea dominant,
 swells dominant and mixed conditions, which defined by $K$ in the following equations:
 
@@ -512,8 +512,8 @@ greater bias, as indicated by the higher RMSE values compared to those in Figure
 model, which employs a wind-sea and swell partitioning approach similar to that
 used in this study. In contrast, the NDBC results are derived from constructed
 wave spectra, which introduces a relatively larger bias in the partitioning
-process. Among the different wave age factors, the 1.2 were selected as it
-presents the lowest RMSE and highest $R$ value than others.
+process. Among the tested wave age factors, a value of 1.2 was identified as optimal,
+ as it yielded the lowest RMSE and the highest correlation coefficient ($R$).
 
 Comparing the two partitions at hindcast wave (Figure \ref{fig:fig4.4}) verse
 gauges (Figure \ref{fig:fig4.5}), several detailed patterns emerge. First, both
@@ -761,7 +761,7 @@ in management and planning decisions \citep{zhu_trends_2024}.
   \caption{The shoreline erosion rate (1995-2020) vs wave system domiant
   coefficient $K$ (1995-2020). (a) correlation at reach scale. (b) correlation
   at county scale. Noticed that $\widetilde{K}$ is the standard-normalization of
-  $K$. Negative value denotes a erosion of shoreline}
+  $K$. Positive value denotes a erosion of shoreline}
   \label{fig:nearshore_cor}
 \end{figure}
 
@@ -818,7 +818,7 @@ Second, the dominance thresholds in Equation~\ref{eq:eq4.10}, adopted from
 \citet{mazzaretto2024worldwide}, were developed for an oceanic spectral climate.
 These cutoffs may not transfer directly to Lake Michigan; in particular, the
 method appears to under-identify swell-dominant conditions (see Figure
-\ref{fig:nearshore_cor}d).
+\ref{fig:nearshore_cor}b).
 
 Third, the present work focuses primarily on a binary partition between swell
 and wind–sea. Subpartitioning within the swell group is also important because
