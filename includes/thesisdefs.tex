@@ -50,10 +50,10 @@
 \gdef\@department{(Civil and Environmental Engineering)} % Default is Electical Engineering
 \gdef\@defensedate{10/02/2025}% Default is a long time from now.
 \gdef\@committee{
-  \indent\indent Daniel Wright, Professor, Civil and Environmental Engineering, Univeristy of Wisconsin-Madison\\ 
-  \indent\indent Paul Block, Professor, Civil and Environmental Engineering, Univeristy of Wisconsin-Madison\\ 
-  \indent\indent Lucas Zoet, Professor, Geoscience, Univeristy of Wisconsin-Madison\\ 
-  \indent\indent Yuli Liu, Assistant Professor, Department of Marine Science, Nanjing University of Information Science and Technology\\
+  Daniel Wright, Professor, Civil and Environmental Engineering, Univeristy of Wisconsin-Madison\\ 
+  Paul Block, Professor, Civil and Environmental Engineering, Univeristy of Wisconsin-Madison\\ 
+  Lucas Zoet, Professor, Geoscience, Univeristy of Wisconsin-Madison\\ 
+  Yuli Liu, Assistant Professor, Department of Marine Science, Nanjing University of Information Science and Technology\\
   }
 
 \renewcommand{\maketitle}{%
@@ -80,8 +80,10 @@
     \end{center}
     Date of final oral examination: \@defensedate \\[\@thesistitlemedskip]
     The dissertation is approved by the following members of the 
-    Final Oral Committee:\\
+    Final Oral Committee:\\[0.5\baselineskip]
+    \hspace*{3em}\begin{minipage}{\dimexpr\linewidth-2em\relax}
     \@committee
+    \end{minipage}
   \end{titlepage}
   \setcounter{footnote}{0}
   \setcounter{page}{1} %title page is NOT counted
